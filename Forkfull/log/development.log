@@ -1,0 +1,8 @@
+  [1m[35m (344.4ms)[0m  [1m[35mCREATE DATABASE "Forkfull_development" ENCODING = 'unicode'[0m
+  ↳ /Users/trevor/.rbenv/versions/2.5.1/bin/rails:23
+  [1m[35m (64.9ms)[0m  [1m[35mCREATE DATABASE "Forkfull_test" ENCODING = 'unicode'[0m
+  ↳ /Users/trevor/.rbenv/versions/2.5.1/bin/rails:23
+  [1m[35m (31.9ms)[0m  [1m[35mCREATE DATABASE "Forkfull_development" ENCODING = 'unicode'[0m
+  ↳ /Users/trevor/.rbenv/versions/2.5.1/bin/rails:23
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE DATABASE "Forkfull_test" ENCODING = 'unicode'[0m
+  ↳ /Users/trevor/.rbenv/versions/2.5.1/bin/rails:23
