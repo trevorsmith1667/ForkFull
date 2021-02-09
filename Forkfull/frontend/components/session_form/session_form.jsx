@@ -4,7 +4,7 @@ class SessionForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            username: '',
+            email: '',
             password: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -35,19 +35,40 @@ class SessionForm extends React.Component {
     }
 
     render() {
+
+        let test = (<> </>)
+
+        if (this.props.formType === "signup") {
+            test =
+                <>
+                    <label>Full Name:
+                <input type="string"
+                            value={this.state.name}
+                            onChange={this.update('name')}
+                            className="signin-input"
+                        />
+                    </label>
+                    <br />
+                </>
+        }
         return (
             <div className="login-form-container">
                 <form onSubmit={this.handleSubmit} className="login-form-box">
-                    Welcome to Lazy Panda!
+                    Welcome to Forkfull!
           <br />
           Please {this.props.formType} or {this.props.navLink}
                     {this.renderErrors()}
                     <div className="login-form">
-                        <br />
-                        <label>Username:
-              <input type="text"
-                                value={this.state.username}
-                                onChange={this.update('username')}
+                        {test}
+                        <label>Username
+                            <input type="string"
+                            value={this.state.username}
+                            className="login-input"/>
+                        </label>
+                        <label>Email:
+              <input type="string"
+                                value={this.state.email}
+                                onChange={this.update('email')}
                                 className="login-input"
                             />
                         </label>
@@ -67,5 +88,4 @@ class SessionForm extends React.Component {
         );
     }
 }
-
 export default SessionForm;
