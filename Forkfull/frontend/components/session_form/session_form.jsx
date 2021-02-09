@@ -4,6 +4,7 @@ class SessionForm extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            username: '',
             email: '',
             password: ''
         };
@@ -36,37 +37,37 @@ class SessionForm extends React.Component {
 
     render() {
 
-        let test = (<> </>)
+        // let test = null
 
-        if (this.props.formType === "signup") {
-            test =
-                <>
-                    <label>Full Name:
-                <input type="string"
-                            value={this.state.name}
-                            onChange={this.update('name')}
-                            className="signin-input"
-                        />
-                    </label>
-                    <br />
-                </>
-        }
+        // if (this.props.formType === "signup") {
+        //     test = (
+        //         <>
+        //             <label>Full Name:
+        //         <input type="string"
+        //                     value={this.state.name}
+        //                     onChange={this.update('name')}
+        //                     className="signin-input"
+        //                 />
+        //             </label>
+        //             <br />
+        //         </>)
+        // }
         return (
             <div className="login-form-container">
                 <form onSubmit={this.handleSubmit} className="login-form-box">
                     Welcome to Forkfull!
-          <br />
-          Please {this.props.formType} or {this.props.navLink}
+                 <br />
+                    Please {this.props.formType} or {this.props.navLink}
                     {this.renderErrors()}
                     <div className="login-form">
-                        {test}
-                        <label>Username
+                        <label>Username:
                             <input type="string"
                             value={this.state.username}
+                            onChange={this.update('username')}
                             className="login-input"/>
                         </label>
                         <label>Email:
-              <input type="string"
+                            <input type= "string"
                                 value={this.state.email}
                                 onChange={this.update('email')}
                                 className="login-input"
