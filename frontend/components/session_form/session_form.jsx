@@ -10,7 +10,7 @@ class SessionForm extends React.Component {
             password: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.
+        this.loginDemo = this.loginDemo.bind(this)
     }
 
     loginDemo(e) {
@@ -55,9 +55,7 @@ class SessionForm extends React.Component {
         return (
             <div className="login-form-container">
                 <form onSubmit={this.handleSubmit} className="login-form-box">
-                    Please Sign In
-                 <br />
-                    Please {this.props.formType} or {this.props.navLink}
+                    <h1>Please Sign In</h1>
                     {this.renderErrors()}
 
                     <div className="login-form">
@@ -84,7 +82,7 @@ class SessionForm extends React.Component {
                     <button id="demo_log"
                             onClick={this.logInDemo}
                             className="demo-button">Demo User
-                    </button>
+                    </button> 
 
                     <div className="link-modal">
                         <a className="close-x" 
@@ -98,7 +96,7 @@ class SessionForm extends React.Component {
                                 className='main link'
                                 onClick={ () =>this.props.openModal('showSignUp') }>Create an account
                                 </a>
-                            </span>
+                    </span>
                 </form>
             </div>
         );

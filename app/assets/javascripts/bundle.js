@@ -475,9 +475,157 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   !*** ./frontend/components/session_form/session_form.jsx ***!
   \***********************************************************/
 /*! exports provided: default */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /Users/trevor/Desktop/ForkFull/frontend/components/session_form/session_form.jsx: Unexpected token (14:4)\n\n\u001b[0m \u001b[90m 12 |\u001b[39m         \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mhandleSubmit \u001b[33m=\u001b[39m \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39mhandleSubmit\u001b[33m.\u001b[39mbind(\u001b[36mthis\u001b[39m)\u001b[33m;\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 13 |\u001b[39m         \u001b[36mthis\u001b[39m\u001b[33m.\u001b[39m\u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 14 |\u001b[39m     }\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m     \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 15 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 16 |\u001b[39m     loginDemo(e) {\u001b[0m\n\u001b[0m \u001b[90m 17 |\u001b[39m     e\u001b[33m.\u001b[39mpreventDefault()\u001b[33m;\u001b[39m\u001b[0m\n    at Object._raise (/Users/trevor/Desktop/ForkFull/node_modules/@babel/parser/lib/index.js:776:17)\n    at Object.raiseWithData (/Users/trevor/Desktop/ForkFull/node_modules/@babel/parser/lib/index.js:769:17)\n    at Object.raise (/Users/trevor/Desktop/ForkFull/node_modules/@babel/parser/lib/index.js:737:17)\n    at Object.unexpected (/Users/trevor/Desktop/ForkFull/node_modules/@babel/parser/lib/index.js:9183:16)\n    at Object.parseIdentifierName (/Users/trevor/Desktop/ForkFull/node_modules/@babel/parser/lib/index.js:11442:18)\n    at Object.parseIdentifier (/Users/trevor/Desktop/ForkFull/node_modules/@babel/parser/lib/index.js:11415:23)\n    at Object.parseMaybePrivateName (/Users/trevor/Desktop/ForkFull/node_modules/@babel/parser/lib/index.js:10743:19)\n    at Object.parseMember (/Users/trevor/Desktop/ForkFull/node_modules/@babel/parser/lib/index.js:10306:63)\n    at Object.parseSubscript (/Users/trevor/Desktop/ForkFull/node_modules/@babel/parser/lib/index.js:10294:19)\n    at Object.parseSubscripts (/Users/trevor/Desktop/ForkFull/node_modules/@babel/parser/lib/index.js:10265:19)\n    at Object.parseExprSubscripts (/Users/trevor/Desktop/ForkFull/node_modules/@babel/parser/lib/index.js:10254:17)\n    at Object.parseUpdate (/Users/trevor/Desktop/ForkFull/node_modules/@babel/parser/lib/index.js:10228:21)\n    at Object.parseMaybeUnary (/Users/trevor/Desktop/ForkFull/node_modules/@babel/parser/lib/index.js:10206:23)\n    at Object.parseExprOps (/Users/trevor/Desktop/ForkFull/node_modules/@babel/parser/lib/index.js:10071:23)\n    at Object.parseMaybeConditional (/Users/trevor/Desktop/ForkFull/node_modules/@babel/parser/lib/index.js:10045:23)\n    at Object.parseMaybeAssign (/Users/trevor/Desktop/ForkFull/node_modules/@babel/parser/lib/index.js:10008:21)\n    at Object.parseExpressionBase (/Users/trevor/Desktop/ForkFull/node_modules/@babel/parser/lib/index.js:9953:23)\n    at allowInAnd (/Users/trevor/Desktop/ForkFull/node_modules/@babel/parser/lib/index.js:9947:39)\n    at Object.allowInAnd (/Users/trevor/Desktop/ForkFull/node_modules/@babel/parser/lib/index.js:11641:16)\n    at Object.parseExpression (/Users/trevor/Desktop/ForkFull/node_modules/@babel/parser/lib/index.js:9947:17)\n    at Object.parseStatementContent (/Users/trevor/Desktop/ForkFull/node_modules/@babel/parser/lib/index.js:11907:23)\n    at Object.parseStatement (/Users/trevor/Desktop/ForkFull/node_modules/@babel/parser/lib/index.js:11776:17)\n    at Object.parseBlockOrModuleBlockBody (/Users/trevor/Desktop/ForkFull/node_modules/@babel/parser/lib/index.js:12358:25)\n    at Object.parseBlockBody (/Users/trevor/Desktop/ForkFull/node_modules/@babel/parser/lib/index.js:12349:10)\n    at Object.parseBlock (/Users/trevor/Desktop/ForkFull/node_modules/@babel/parser/lib/index.js:12333:10)\n    at Object.parseFunctionBody (/Users/trevor/Desktop/ForkFull/node_modules/@babel/parser/lib/index.js:11319:24)\n    at Object.parseFunctionBodyAndFinish (/Users/trevor/Desktop/ForkFull/node_modules/@babel/parser/lib/index.js:11303:10)\n    at Object.parseMethod (/Users/trevor/Desktop/ForkFull/node_modules/@babel/parser/lib/index.js:11253:10)\n    at Object.pushClassMethod (/Users/trevor/Desktop/ForkFull/node_modules/@babel/parser/lib/index.js:12799:30)\n    at Object.parseClassMemberWithIsStatic (/Users/trevor/Desktop/ForkFull/node_modules/@babel/parser/lib/index.js:12690:12)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/react.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = _getPrototypeOf(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+
+
+
+var SessionForm = /*#__PURE__*/function (_React$Component) {
+  _inherits(SessionForm, _React$Component);
+
+  var _super = _createSuper(SessionForm);
+
+  function SessionForm(props) {
+    var _this;
+
+    _classCallCheck(this, SessionForm);
+
+    _this = _super.call(this, props);
+    _this.state = {
+      username: '',
+      email: '',
+      password: ''
+    };
+    _this.handleSubmit = _this.handleSubmit.bind(_assertThisInitialized(_this));
+    _this.loginDemo = _this.loginDemo.bind(_assertThisInitialized(_this));
+    return _this;
+  }
+
+  _createClass(SessionForm, [{
+    key: "loginDemo",
+    value: function loginDemo(e) {
+      var _this2 = this;
+
+      e.preventDefault();
+
+      if (e.target.id === "demo-log") {
+        var user = {
+          email: "demo_user@gmail.com",
+          password: "123456"
+        };
+        this.props.login(user).then(function (user) {
+          _this2.props.closeModal();
+        });
+      }
+    }
+  }, {
+    key: "update",
+    value: function update(field) {
+      var _this3 = this;
+
+      return function (e) {
+        return _this3.setState(_defineProperty({}, field, e.currentTarget.value));
+      };
+    }
+  }, {
+    key: "handleSubmit",
+    value: function handleSubmit(e) {
+      e.preventDefault();
+      var user = Object.assign({}, this.state);
+      this.props.processForm(user).then(this.props.closeModal);
+    }
+  }, {
+    key: "renderErrors",
+    value: function renderErrors() {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, this.props.errors.map(function (error, i) {
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+          key: "error-".concat(i)
+        }, error);
+      }));
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this4 = this;
+
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "login-form-container"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
+        onSubmit: this.handleSubmit,
+        className: "login-form-box"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "Please Sign In"), this.renderErrors(), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "login-form"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "string",
+        value: this.state.username,
+        onChange: this.update('username'),
+        className: "login-input"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "string",
+        value: this.state.email,
+        onChange: this.update('email'),
+        className: "login-input"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        type: "password",
+        value: this.state.password,
+        onChange: this.update('password'),
+        className: "login-input"
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        type: "submit",
+        className: "login_button"
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+        id: "demo_log",
+        onClick: this.logInDemo,
+        className: "demo-button"
+      }, "Demo User"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "link-modal"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        className: "close-x",
+        onClick: this.props.closeModal
+      }, "X")), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+        className: "link-modal"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", null, "New to Forkfull?"), "\xA0", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        className: "main link",
+        onClick: function onClick() {
+          return _this4.props.openModal('showSignUp');
+        }
+      }, "Create an account"))));
+    }
+  }]);
+
+  return SessionForm;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["withRouter"])(SessionForm));
 
 /***/ }),
 
