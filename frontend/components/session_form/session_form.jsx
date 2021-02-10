@@ -13,21 +13,22 @@ class SessionForm extends React.Component {
         this.loginDemo = this.loginDemo.bind(this)
     }
 
+    
+    componentWillUnmount() {
+        this.props.clearErrors();
+    }
+    
     loginDemo(e) {
     e.preventDefault();
-    if (e.target.id === "demo-log") {
-      const user = {
+    e.stopPropagation();
+      const demo = {
+          username: "demo_user",
           email: "demo_user@gmail.com",
           password: "123456"
       }
-      this.props.login(user)
-        .then(user => {this.props.closeModal()})
+      this.props.processForm(demo).then(this.props.closeModal)
       }
-    }
     
-   componentWillUnmount() {
-    this.props.clearErrors();
-    }
 
     update(field) {
         return e => this.setState({
@@ -40,7 +41,7 @@ class SessionForm extends React.Component {
         const user = Object.assign({}, this.state);
         this.props.processForm(user).then(this.props.closeModal);
     }
-
+    
     renderErrors() {
         return (
             <ul>
@@ -54,53 +55,54 @@ class SessionForm extends React.Component {
     }
 
     render() {
-
-
+        let demoButton = (<></>)
+        if (this.props.formType === 'login') {
+            demoButton = <a onClick={this.loginDemo}>Demo Login</a>
+                
+        }
+       
         return (
             <div className="login-form-container">
                 <form onSubmit={this.handleSubmit} className="login-form-box">
-                    <h1>Please Sign In</h1>
+                    <h1 className="modal-header">Please Sign In</h1>
+                    <div onClick={this.props.closeModal} className="close-x">X</div>
                     {this.renderErrors()}
 
                     <div className="login-form">
                         <input type="string"
                             value={this.state.username}
                             onChange={this.update('username')}
-                            className="login-input"/>
+                            className="login-input"
+                            placeholder="Username"/>
+                            
 
                         <input type= "string"
                             value={this.state.email}
                             onChange={this.update('email')}
-                            className="login-input"/>
+                            className="login-input"
+                            placeholder="Email"/>
                         
                     
                         <input type="password"
                             value={this.state.password}
                             onChange={this.update('password')}
-                            className="login-input"/>
+                            className="login-input"
+                            placeholder="Password"/>
                        
                     
-                        <button type="submit" className="login_button">Sign In</button>
+                        <type="submit" className="login_button">Sign In</button>
                     </div>
 
-                    <button id="demo_log"
-                            onClick={this.logInDemo}
-                            className="demo-button">Demo User
-                    </button> 
 
-                    <div className="link-modal">
-                        <a className="close-x" 
-                            onClick={this.props.closeModal}>X
-                        </a>
-                    </div>
+
                     
-                    <span className="link-modal">
-                        <a>New to Forkfull?</a>&nbsp;
+                    <div className="modal-footer">
+                        
                                 <a 
                                 className='signup-link'
-                                onClick={ () =>this.props.openModal('showsignup') }>Create an account
+                                onClick={ () =>this.props.openModal('signup') }>Create an account
                                 </a>
-                    </span>
+                    </div>
                 </form>
             </div>
         );
