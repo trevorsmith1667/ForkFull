@@ -10,7 +10,20 @@ class SessionForm extends React.Component {
             password: ''
         };
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.
     }
+
+    loginDemo(e) {
+    e.preventDefault();
+    if (e.target.id === "demo-log") {
+      let user = {
+          email: "demo_user@gmail.com",
+          password: "123456"
+      }
+      this.props.login(user)
+        .then(user => {this.props.closeModal()})
+    }
+  }
 
     update(field) {
         return e => this.setState({
@@ -42,7 +55,7 @@ class SessionForm extends React.Component {
         return (
             <div className="login-form-container">
                 <form onSubmit={this.handleSubmit} className="login-form-box">
-                    Welcome to Forkfull!
+                    Please Sign In
                  <br />
                     Please {this.props.formType} or {this.props.navLink}
                     {this.renderErrors()}
@@ -71,6 +84,23 @@ class SessionForm extends React.Component {
                         <br />
                         <input className="session-submit" type="submit" value={this.props.formType} />
                     </div>
+                     <button id="demo_log"
+                            onClick={this.logInDemo}
+                            className="demo_button">Demo User
+                    </button>
+                        <div className="link-modal">
+                            <a className="demo_link" 
+                                onClick={this.props.closeModal}>X
+                            </a>
+                        </div>
+                            <span className="link-modal">
+                                <a>New to Forkfull?</a>
+                                &nbsp;
+                                <a 
+                                className='main link'
+                                onClick={ () =>this.props.openModal('showSignUp') }>Create an account
+                                </a>
+                            </span>
                 </form>
             </div>
         );
