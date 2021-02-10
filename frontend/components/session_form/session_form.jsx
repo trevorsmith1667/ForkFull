@@ -16,7 +16,7 @@ class SessionForm extends React.Component {
     loginDemo(e) {
     e.preventDefault();
     if (e.target.id === "demo-log") {
-      let user = {
+      const user = {
           email: "demo_user@gmail.com",
           password: "123456"
       }
@@ -59,43 +59,41 @@ class SessionForm extends React.Component {
                  <br />
                     Please {this.props.formType} or {this.props.navLink}
                     {this.renderErrors()}
+
                     <div className="login-form">
-                        <label>Username:
-                            <input type="string"
+                        <input type="string"
                             value={this.state.username}
                             onChange={this.update('username')}
                             className="login-input"/>
-                        </label>
-                        <label>Email:
-                            <input type= "string"
-                                value={this.state.email}
-                                onChange={this.update('email')}
-                                className="login-input"
-                            />
-                        </label>
-                        <br />
-                        <label>Password:
-              <input type="password"
-                                value={this.state.password}
-                                onChange={this.update('password')}
-                                className="login-input"
-                            />
-                        </label>
-                        <br />
-                        <input className="session-submit" type="submit" value={this.props.formType} />
+
+                        <input type= "string"
+                            value={this.state.email}
+                            onChange={this.update('email')}
+                            className="login-input"/>
+                        
+                    
+                        <input type="password"
+                            value={this.state.password}
+                            onChange={this.update('password')}
+                            className="login-input"/>
+                       
+                    
+                        <button type="submit" className="login_button"></button>
                     </div>
-                     <button id="demo_log"
+
+                    <button id="demo_log"
                             onClick={this.logInDemo}
-                            className="demo_button">Demo User
+                            className="demo-button">Demo User
                     </button>
-                        <div className="link-modal">
-                            <a className="demo_link" 
-                                onClick={this.props.closeModal}>X
-                            </a>
-                        </div>
-                            <span className="link-modal">
-                                <a>New to Forkfull?</a>
-                                &nbsp;
+
+                    <div className="link-modal">
+                        <a className="close-x" 
+                            onClick={this.props.closeModal}>X
+                        </a>
+                    </div>
+                    
+                    <span className="link-modal">
+                        <a>New to Forkfull?</a>&nbsp;
                                 <a 
                                 className='main link'
                                 onClick={ () =>this.props.openModal('showSignUp') }>Create an account
