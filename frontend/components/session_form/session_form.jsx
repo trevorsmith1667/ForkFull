@@ -22,8 +22,12 @@ class SessionForm extends React.Component {
       }
       this.props.login(user)
         .then(user => {this.props.closeModal()})
+      }
     }
-  }
+    
+   componentWillUnmount() {
+    this.props.clearErrors();
+    }
 
     update(field) {
         return e => this.setState({
@@ -76,7 +80,7 @@ class SessionForm extends React.Component {
                             className="login-input"/>
                        
                     
-                        <button type="submit" className="login_button"></button>
+                        <button type="submit" className="login_button">Sign In</button>
                     </div>
 
                     <button id="demo_log"
@@ -93,8 +97,8 @@ class SessionForm extends React.Component {
                     <span className="link-modal">
                         <a>New to Forkfull?</a>&nbsp;
                                 <a 
-                                className='main link'
-                                onClick={ () =>this.props.openModal('showSignUp') }>Create an account
+                                className='signup-link'
+                                onClick={ () =>this.props.openModal('showsignup') }>Create an account
                                 </a>
                     </span>
                 </form>

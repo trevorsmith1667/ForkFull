@@ -37,6 +37,7 @@ const mSTP = state => {
 const mDTP = dispatch => {
   return {
     closeModal: () => dispatch(closeModal())
+    
   };
 };
 
