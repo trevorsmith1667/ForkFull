@@ -84,12 +84,23 @@ class SessionForm extends React.Component {
                                 className="login-input"
                                 placeholder="Password"/>
                        
-                    
-                        <button type="submit" className="login_button">Sign In</button>
+                        <button type="submit" className="login-button">Sign In</button>
+                        <button className="login-button" onClick={this.loginDemo}>Demo Sign In</button>
                     </div>
                 </form>
+                <div className="signup-link">New to ForkFull?
+                    <button onClick={this.props.openModal}>Create an account</button>
+
+                </div>
             </div>
-        );
+        )
+    } else {
+        return (
+             <div className="login-form-container">
+                    <form onSubmit={this.handleSubmit} className="login-form-box">
+                        <h1 className="modal-header">Welcome to ForkFull</h1>
+                        {this.renderErrors()}
+        )
     }
 }
 export default withRouter(SessionForm);
