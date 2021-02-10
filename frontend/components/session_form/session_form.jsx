@@ -56,7 +56,6 @@ class SessionForm extends React.Component {
 
     render() {
         if (this.props.formType === 'login') {
-
             return (
                 <div className="login-form-container">
                     <form onSubmit={this.handleSubmit} className="login-form-box">
@@ -64,43 +63,65 @@ class SessionForm extends React.Component {
                         {this.renderErrors()}
 
                         <div className="login-form">
-                            <input type="string"
-                                value={this.state.username}
-                                onChange={this.update('username')}
-                                className="login-input"
-                                placeholder="Username"/>
-                            
-
                             <input type= "string"
-                                value={this.state.email}
-                                onChange={this.update('email')}
-                                className="login-input"
-                                placeholder="Email"/>
+                                    value={this.state.email}
+                                    onChange={this.update('email')}
+                                    className="login-input"
+                                    placeholder="Email"/>
                         
                     
-                        <input type="password"
-                                value={this.state.password}
-                                onChange={this.update('password')}
-                                className="login-input"
-                                placeholder="Password"/>
+                            <input type="password"
+                                    value={this.state.password}
+                                    onChange={this.update('password')}
+                                    className="login-input"
+                                    placeholder="Password"/>
                        
-                        <button type="submit" className="login-button">Sign In</button>
-                        <button className="login-button" onClick={this.loginDemo}>Demo Sign In</button>
-                    </div>
-                </form>
-                <div className="signup-link">New to ForkFull?
-                    <button onClick={this.props.openModal}>Create an account</button>
+                            <button type="submit" className="login-button">Sign In</button>
+                            <button className="login-button" onClick={this.loginDemo}>Demo Sign In</button>
+                        </div>
+                    </form>
 
+                    <span className="signup-link">New to ForkFull?
+                        <button onClick={this.props.openModal}>Create an account</button>
+                    </span>  
                 </div>
-            </div>
-        )
-    } else {
-        return (
-             <div className="login-form-container">
-                    <form onSubmit={this.handleSubmit} className="login-form-box">
-                        <h1 className="modal-header">Welcome to ForkFull</h1>
-                        {this.renderErrors()}
-        )
+            );
+        }
+          else { return (
+                    <div className="login-form-container">
+                        <form onSubmit={this.handleSubmit} className="login-form-box">
+                            <h1 className="modal-header">Welcome to ForkFull</h1>
+                                {this.renderErrors()}
+                            <div className="login-form">
+                                <input type="string"
+                                    value={this.state.username}
+                                    onChange={this.update('username')}
+                                    className="login-input"
+                                    placeholder="Username"/>
+                            
+
+                                <input type= "string"
+                                    value={this.state.email}
+                                    onChange={this.update('email')}
+                                    className="login-input"
+                                    placeholder="Email"/>
+                        
+                    
+                                <input type="password"
+                                    value={this.state.password}
+                                    onChange={this.update('password')}
+                                    className="login-input"
+                                    placeholder="Password"/>
+                       
+                                <button type="submit" className="login-button">Create Account</button>
+                                <button className="login-button" onClick={this.loginDemo}>Demo Sign In</button>
+
+                            </div>
+                    </form>
+                </div>
+
+            )
+        }
     }
 }
 export default withRouter(SessionForm);
