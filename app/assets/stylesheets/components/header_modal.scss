@@ -1,3 +1,30 @@
+.login-form {
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+ }
+
+ .login-input {
+   margin-left: 20px;
+ }
+  
+  .login-form-box {
+    outline: 1px solid black;
+    padding: 20px;
+    background: white;
+    position: relative;
+  }
+  
+ .header-link {
+   text-decoration: none;
+   color: black;
+ }
+
+ hr {
+   border-bottom: 1px solid grey;
+ }
+
+
 .modal-background {
    position: fixed;
    top: 0;
