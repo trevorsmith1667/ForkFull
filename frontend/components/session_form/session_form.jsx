@@ -37,10 +37,7 @@ class SessionForm extends React.Component {
     }
 
 
-    toggleClass(type){
-        return !this.handleErrors(type).length ? "" : "error-input"
-
-    }
+    
      handleErrors(error){
                 
         return this.props.errors.filter(error => error.includes(error))
@@ -63,7 +60,7 @@ class SessionForm extends React.Component {
                     <form onSubmit={this.handleSubmit} className="login-form-box">
                         <button onClick={this.props.closeModal} className="close-modal" >×</button>
                         <h1 className="modal-header">Please Sign In</h1>
-                        <ul>{allErrors}</ul>
+                        <ul className="error-list">{allErrors}</ul>
 
                         <div className="login-form">
                             <input type= "string"
@@ -96,7 +93,7 @@ class SessionForm extends React.Component {
                             <button onClick={this.props.closeModal} className="close-modal" >×</button>
                             <h1 className="modal-header">Welcome to ForkFull</h1>
 
-                            <ul className="error-list">{this.handleErrors('Username')}</ul>
+                            <ul className="error-list">{this.handleErrors('username')}</ul>
                             <div className="login-form">
                                 <input type="string"
                                     value={this.state.username}
@@ -105,7 +102,7 @@ class SessionForm extends React.Component {
                                     placeholder="Username"/>
                             
 
-                            <ul className="error-list">{this.handleErrors('Email')}</ul>
+                            <ul className="error-list">{this.handleErrors('email')}</ul>
                                 <input type= "string"
                                     value={this.state.email}
                                     onChange={this.update('email')}

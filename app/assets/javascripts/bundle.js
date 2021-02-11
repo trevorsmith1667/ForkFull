@@ -620,11 +620,6 @@ var SessionForm = /*#__PURE__*/function (_React$Component) {
       };
     }
   }, {
-    key: "toggleClass",
-    value: function toggleClass(type) {
-      return !this.handleErrors(type).length ? "" : "error-input";
-    }
-  }, {
     key: "handleErrors",
     value: function handleErrors(error) {
       return this.props.errors.filter(function (error) {
@@ -658,7 +653,9 @@ var SessionForm = /*#__PURE__*/function (_React$Component) {
           className: "close-modal"
         }, "\xD7"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
           className: "modal-header"
-        }, "Please Sign In"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", null, allErrors), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        }, "Please Sign In"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+          className: "error-list"
+        }, allErrors), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "login-form"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
           type: "string",
@@ -694,7 +691,7 @@ var SessionForm = /*#__PURE__*/function (_React$Component) {
           className: "modal-header"
         }, "Welcome to ForkFull"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
           className: "error-list"
-        }, this.handleErrors('Username')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        }, this.handleErrors('username')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "login-form"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
           type: "string",
@@ -704,7 +701,7 @@ var SessionForm = /*#__PURE__*/function (_React$Component) {
           placeholder: "Username"
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
           className: "error-list"
-        }, this.handleErrors('Email')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        }, this.handleErrors('email')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
           type: "string",
           value: this.state.email,
           onChange: this.update('email'),
