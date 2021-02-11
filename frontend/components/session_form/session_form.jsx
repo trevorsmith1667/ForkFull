@@ -25,7 +25,7 @@ class SessionForm extends React.Component {
           email: "demo_user@gmail.com",
           password: "123456"
       }
-      
+
       this.props.processForm(demo).then(this.props.closeModal)
       }
     
@@ -115,7 +115,7 @@ class SessionForm extends React.Component {
                                     className="login-input"
                                     placeholder="Password"/>
                        
-                                <button type="submit" className="login-button">Create Account</button>
+                                <button type="submit" className="signup-button">Create Account</button>
                                 <button className="login-button" onClick={this.loginDemo}>Demo Sign In</button>
 
                             </div>

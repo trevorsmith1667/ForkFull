@@ -250,14 +250,16 @@ var Greeting = function Greeting(_ref) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
       className: "login-signup"
     }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-      onClick: function onClick() {
-        return openModal('login');
-      }
-    }, "Sign in"), "\xA0\xA0", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      id: "signup",
       onClick: function onClick() {
         return openModal('signup');
       }
-    }, "Sign up"));
+    }, "Sign up"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+      id: "login",
+      onClick: function onClick() {
+        return openModal('login');
+      }
+    }, "Sign in"));
   };
 
   var personalGreeting = function personalGreeting() {
@@ -649,7 +651,7 @@ var SessionForm = /*#__PURE__*/function (_React$Component) {
           placeholder: "Password"
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
           type: "submit",
-          className: "login-button"
+          className: "signup-button"
         }, "Create Account"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
           className: "login-button",
           onClick: this.loginDemo
