@@ -21,14 +21,50 @@
 .login-signup {
     display: flex;
     justify-content: flex-end;
+    align-content: center;
     padding: 0 16px;
 }
+
+#nav-header-img {
+    position: absolute;
+    top: 22px;
+    width: 85px;
+    height: 68px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.nav-header { 
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    box-sizing: border-box;
+    height: 2.75rem;
+    background-color: #fff;
+    padding: 0 16px 0 32px;
+}
+
+#app-title {
+    position: absolute;
+    top: 45px;
+    left: 105px;
+    color: black;
+    font-size: 20px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+}
+
 
 #signup {
     display: inline-block;
     text-align: center;
     background-color: #247f9e;
     border: 1px solid #247f9e;
+    top: 35px;
     color: white;
     width: 80px;
     line-height: 26px;
@@ -45,6 +81,7 @@
     background-color: transparent;
     color: #2d333f;
     width: 80px;
+    top: 35px;
     line-height: 26px;
     cursor: pointer;
     border: 1px solid #d8d9db;
