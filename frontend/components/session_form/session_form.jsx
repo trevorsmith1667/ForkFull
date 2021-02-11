@@ -61,6 +61,7 @@ class SessionForm extends React.Component {
             return (
                 <div className="login-form-container">
                     <form onSubmit={this.handleSubmit} className="login-form-box">
+                        <button onClick={this.props.closeModal} className="close-modal" >×</button>
                         <h1 className="modal-header">Please Sign In</h1>
                         {this.renderErrors()}
 
@@ -77,7 +78,6 @@ class SessionForm extends React.Component {
                                     onChange={this.update('password')}
                                     className="login-input"
                                     placeholder="Password"/>
-                       
                             <button type="submit" className="login-button">Sign In</button>
                             <button className="demo-button" onClick={this.loginDemo}>Demo Sign In</button>
                         </div>
@@ -92,6 +92,7 @@ class SessionForm extends React.Component {
           else { return (
                     <div className="login-form-container">
                         <form onSubmit={this.handleSubmit} className="login-form-box">
+                            <button onClick={this.props.closeModal} className="close-modal" >×</button>
                             <h1 className="modal-header">Welcome to ForkFull</h1>
                                 {this.renderErrors()}
                             <div className="login-form">
@@ -114,7 +115,7 @@ class SessionForm extends React.Component {
                                     onChange={this.update('password')}
                                     className="login-input"
                                     placeholder="Password"/>
-                       
+
                                 <button type="submit" className="signup-button">Create Account</button>
                                 <button className="demo-button" onClick={this.loginDemo}>Demo Sign In</button>
 
