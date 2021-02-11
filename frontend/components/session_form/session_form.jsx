@@ -35,35 +35,35 @@ class SessionForm extends React.Component {
             [field]: e.currentTarget.value
         });
     }
+
+
+    toggleClass(type){
+        return !this.handleErrors(type).length ? "" : "error-input"
+
+    }
+     handleErrors(error){
+                
+        return this.props.errors.filter(error => error.includes(error))
+    }
     
     handleSubmit(e) {
         e.preventDefault();
         const user = Object.assign({}, this.state);
         this.props.processForm(user).then(this.props.closeModal);
-    }
+    };
     
-    renderErrors() {
-        return (
-            <ul>
-                {this.props.errors.map((error, i) => (
-                    <li id="error" key={i}>
-                        {error}
-                    </li>
-                ))}
-            </ul>
-        );
-    }
 
 
 
     render() {
+        const allErrors = this.props.errors.map((error, i) => (<li key={i}>{error}</li>))
         if (this.props.formType === 'login') {
             return (
                 <div className="login-form-container">
                     <form onSubmit={this.handleSubmit} className="login-form-box">
                         <button onClick={this.props.closeModal} className="close-modal" >×</button>
                         <h1 className="modal-header">Please Sign In</h1>
-                        {this.renderErrors()}
+                        <ul>{allErrors}</ul>
 
                         <div className="login-form">
                             <input type= "string"
@@ -73,6 +73,7 @@ class SessionForm extends React.Component {
                                     placeholder="Email"/>
                         
                     
+                       
                             <input type="password"
                                     value={this.state.password}
                                     onChange={this.update('password')}
@@ -94,7 +95,8 @@ class SessionForm extends React.Component {
                         <form onSubmit={this.handleSubmit} className="login-form-box">
                             <button onClick={this.props.closeModal} className="close-modal" >×</button>
                             <h1 className="modal-header">Welcome to ForkFull</h1>
-                                {this.renderErrors()}
+
+                            <ul className="error-list">{this.handleErrors('Username')}</ul>
                             <div className="login-form">
                                 <input type="string"
                                     value={this.state.username}
@@ -103,13 +105,16 @@ class SessionForm extends React.Component {
                                     placeholder="Username"/>
                             
 
+                            <ul className="error-list">{this.handleErrors('Email')}</ul>
                                 <input type= "string"
                                     value={this.state.email}
                                     onChange={this.update('email')}
                                     className="login-input"
                                     placeholder="Email"/>
+                        `           
                         
                     
+                        <ul className="error-list">{this.handleErrors('password')}</ul>
                                 <input type="password"
                                     value={this.state.password}
                                     onChange={this.update('password')}
