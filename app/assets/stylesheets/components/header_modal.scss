@@ -57,11 +57,30 @@
  .login-button {
     width: 280px;
     color: white;
-    border-radius: 2px;
+    border-radius: 3px;
+    cursor: pointer;
     background-color: #DA3743;
-    line-height: 50px;
+    line-height: 40px;
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
+    padding-bottom: 5px;
+    text-align: center;
+    border-width: thin;
+
+ }
+
+ .demo-button { 
+    width: 280px;
+    color: white;
+    border-radius: 3px;
+    cursor: pointer;
+    background-color: #DA3743;
+    line-height: 40px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+    padding-top: 5px;
+    text-align: center;
+    border-width: thin;
 
  }
 
@@ -70,12 +89,14 @@
     color: white;
     border-radius: 3px;
     background-color: #DA3743;
-    line-height: 50px;
+    line-height: 40px;
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     position: relative;
     cursor: pointer;
     text-align: center;
+    border-width: thin;
+  
  }
 
 
@@ -83,14 +104,24 @@
     text-align: left;
     padding: 0px 4px;
     font-size: 18px;
-    margin: 10px 16px 0px 16px;
+    line-height: 1;
+    display: block;
+    margin: 0;
     padding-top: 8px;
     border-top: .5px solid rgba(0, 0, 0, 0.27);
+    font-family: 'Source Sans Pro', sans-serif;
+    box-sizing: border-box;
+    position: relative;
+    padding-left: 16px;
+    padding-right: 16px;
+    float: left;
  }
 
  .signup-link > button {
     font-family: 'Source Sans Pro', sans-serif;
     border: none;
     padding: 0px;
-    color: #2d333f;
+    color: #da3743;
+    background-color: transparent;
+    font-size: 18px;
  }

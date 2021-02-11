@@ -665,7 +665,7 @@ var SessionForm = /*#__PURE__*/function (_React$Component) {
           type: "submit",
           className: "login-button"
         }, "Sign In"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-          className: "login-button",
+          className: "demo-button",
           onClick: this.loginDemo
         }, "Demo Sign In"))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
           className: "signup-link"
@@ -702,7 +702,7 @@ var SessionForm = /*#__PURE__*/function (_React$Component) {
           type: "submit",
           className: "signup-button"
         }, "Create Account"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-          className: "login-button",
+          className: "demo-button",
           onClick: this.loginDemo
         }, "Demo Sign In"))));
       }

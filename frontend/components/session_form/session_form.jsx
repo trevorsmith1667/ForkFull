@@ -79,7 +79,7 @@ class SessionForm extends React.Component {
                                     placeholder="Password"/>
                        
                             <button type="submit" className="login-button">Sign In</button>
-                            <button className="login-button" onClick={this.loginDemo}>Demo Sign In</button>
+                            <button className="demo-button" onClick={this.loginDemo}>Demo Sign In</button>
                         </div>
                     </form>
 
@@ -116,7 +116,7 @@ class SessionForm extends React.Component {
                                     placeholder="Password"/>
                        
                                 <button type="submit" className="signup-button">Create Account</button>
-                                <button className="login-button" onClick={this.loginDemo}>Demo Sign In</button>
+                                <button className="demo-button" onClick={this.loginDemo}>Demo Sign In</button>
 
                             </div>
                     </form>
