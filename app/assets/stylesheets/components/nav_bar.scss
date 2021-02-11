@@ -18,6 +18,12 @@
     margin: 0px -14px 0px 0px;
 }
 
+.login-signup {
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 16px;
+}
+
 #signup {
     display: inline-block;
     text-align: center;
@@ -28,20 +34,23 @@
     line-height: 26px;
     cursor: pointer;
     border-radius: 3px;
-    margin: 0px 8px;
+    margin: 0px 4px;
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 14px;
 }
 
 #login {
+    display: inline-block;
     text-align: center;
-    //needs background colors
-    color: white;
+    background-color: transparent;
+    color: #2d333f;
     width: 80px;
     line-height: 26px;
     cursor: pointer;
+    border: 1px solid #d8d9db;
     border-radius: 3px;
-    margin: 10px 0px;
+    margin: 0px 0px 0px 4px;
     font-family: 'Source Sans Pro', sans-serif;
-    font-size: 16px;
+    font-size: 14px;
+    padding: 0 16px;
 }
