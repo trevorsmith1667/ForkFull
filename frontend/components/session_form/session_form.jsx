@@ -22,10 +22,10 @@ class SessionForm extends React.Component {
     e.preventDefault();
     e.stopPropagation();
       const demo = {
-          username: "demo_user",
           email: "demo_user@gmail.com",
           password: "123456"
       }
+      
       this.props.processForm(demo).then(this.props.closeModal)
       }
     
@@ -53,6 +53,8 @@ class SessionForm extends React.Component {
             </ul>
         );
     }
+
+
 
     render() {
         if (this.props.formType === 'login') {

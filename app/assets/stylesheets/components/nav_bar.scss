@@ -18,7 +18,21 @@
     margin: 0px -14px 0px 0px;
 }
 
-.login-signup {
+.login {
+    text-align: center;
+    //needs background colors
+    color: white;
+    width: 80px;
+    line-height: 26px;
+    cursor: pointer;
+    border-radius: 3px;
+    margin: 10px 0px;
+    font-family: 'Darker Grotesque', sans-serif;;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.signup {
     text-align: center;
     //needs background colors
     color: white;

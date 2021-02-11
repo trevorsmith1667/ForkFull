@@ -296,10 +296,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var mapStateToProps = function mapStateToProps(_ref) {
-  var session = _ref.session;
+var mapStateToProps = function mapStateToProps(state) {
   return {
-    currentUser: session.currentUser
+    currentUser: state.entities.users[state.session.id]
   };
 };
 
@@ -471,10 +470,12 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
     }, "Create an account"),
     clearErrors: function clearErrors() {
       return dispatch(Object(_actions_session_actions__WEBPACK_IMPORTED_MODULE_2__["clearErrors"])());
-    } // signup: (user) => dispatch(signup(user))
+    },
+    // signup: (user) => dispatch(signup(user))
     //openModal: () => dispatch(openModal())
-    // closeModal: () => dispatch(closeModal())
-
+    closeModal: function closeModal() {
+      return dispatch(Object(_actions_modal_actions__WEBPACK_IMPORTED_MODULE_3__["closeModal"])());
+    }
   };
 };
 
@@ -553,7 +554,6 @@ var SessionForm = /*#__PURE__*/function (_React$Component) {
       e.preventDefault();
       e.stopPropagation();
       var demo = {
-        username: "demo_user",
         email: "demo_user@gmail.com",
         password: "123456"
       };
@@ -732,6 +732,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _components_root__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/root */ "./frontend/components/root.jsx");
 /* harmony import */ var _store_store__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./store/store */ "./frontend/store/store.js");
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
@@ -741,8 +743,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
   if (window.currentUser) {
     var preloadedState = {
+      entities: {
+        users: _defineProperty({}, window.currentUser.id, window.currentUser)
+      },
       session: {
-        currentUser: window.currentUser
+        id: window.currentUser.id
       }
     };
     store = Object(_store_store__WEBPACK_IMPORTED_MODULE_3__["default"])(preloadedState);
@@ -755,6 +760,7 @@ document.addEventListener('DOMContentLoaded', function () {
   react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_root__WEBPACK_IMPORTED_MODULE_2__["default"], {
     store: store
   }), root);
+  window.store = store;
 });
 
 /***/ }),
