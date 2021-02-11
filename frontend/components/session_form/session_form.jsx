@@ -81,8 +81,8 @@ class SessionForm extends React.Component {
                         </div>
                     </form>
 
-                    <span className="signup-link">New to ForkFull?
-                        <button onClick={this.props.openModal}>Create an account</button>
+                    <span className="signup-link">New to ForkFull? &nbsp;
+                         {this.props.otherForm}
                     </span>  
                 </div>
             );

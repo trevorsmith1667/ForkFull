@@ -12,7 +12,7 @@ const App = () => (
         <Modal />
         <header>
             <Link to="/" className="header-link">
-                <h1>Forkfull</h1>
+                <h1>ForkFull</h1>
             </Link>
             <GreetingContainer />
         </header>
