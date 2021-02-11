@@ -13,9 +13,9 @@
 .header-group{
     display: flex;
     cursor: pointer;
-    justify-content: center;
+    justify-content: flex-end;
     width: auto;
-    margin: 0px -14px 0px 0px;
+    //margin: 0px -14px 0px 0px;
 }
 
 .login-signup {
@@ -90,4 +90,16 @@
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 14px;
     padding: 0 16px;
+}
+
+.header-button {
+  display: block;
+  height: 30px;
+  text-align: center;
+  text-transform: none;
+  font-weight: 500;
+  font-family: 'Source Sans Pro', sans-serif;
+  line-height: 17px;
+  width: 130px;
+  cursor: pointer;
 }
