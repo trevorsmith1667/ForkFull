@@ -1,5 +1,6 @@
 import React from 'react';
-import DropdownUser from '../nav/dropdown_user'
+import { FaRegUser } from 'react-icons/fa';
+
 
 
 
@@ -13,7 +14,11 @@ const Greeting = ({ currentUser, logout, openModal }) => {
     );
     const personalGreeting = () => (
         <hgroup className="header-group">
-            <DropdownUser/>
+            <div class="box arrow-top">
+                <FaRegUser/>
+            </div>
+            <h2 className="header-name">Hello, {currentUser.username}!</h2>
+            <button className="header-button" onClick={logout}>Log Out</button>
         </hgroup>
     );
  
