@@ -32,14 +32,7 @@
     text-align: left;
     font-family: 'Source Sans Pro', sans-serif;
  }
- #error {
-    text-align: left;
-    padding: 0px 16px;
-    color: red;
-    font-family: 'Source Sans Pro', sans-serif;
-    
- }
- 
+  
  .login-input {
     width: 396px;
     line-height: 20px;
@@ -109,6 +102,9 @@
    font-weight: bold;
    font-size: 16px;
    padding-bottom: 8px;
+   position: relative;
+   text-align: left;
+   font-family: 'Source Sans Pro', sans-serif;
  }
 
 

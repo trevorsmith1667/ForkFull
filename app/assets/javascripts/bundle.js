@@ -248,6 +248,8 @@ var App = function App() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/react.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _nav_dropdown_user__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../nav/dropdown_user */ "./frontend/components/nav/dropdown_user.jsx");
+
 
 
 var Greeting = function Greeting(_ref) {
@@ -274,12 +276,7 @@ var Greeting = function Greeting(_ref) {
   var personalGreeting = function personalGreeting() {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("hgroup", {
       className: "header-group"
-    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
-      className: "header-name"
-    }, "Hello, ", currentUser.username, "!"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
-      className: "header-button",
-      onClick: logout
-    }, "Log Out"));
+    }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_nav_dropdown_user__WEBPACK_IMPORTED_MODULE_1__["default"], null));
   };
 
   return currentUser ? personalGreeting(currentUser, logout) : sessionLinks();
@@ -398,6 +395,17 @@ var mDTP = function mDTP(dispatch) {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mSTP, mDTP)(Modal));
+
+/***/ }),
+
+/***/ "./frontend/components/nav/dropdown_user.jsx":
+/*!***************************************************!*\
+  !*** ./frontend/components/nav/dropdown_user.jsx ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, exports) {
+
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nError: ENOENT: no such file or directory, open '/Users/trevor/Desktop/ForkFull/frontend/components/nav/dropdown_user.jsx'");
 
 /***/ }),
 
@@ -621,9 +629,9 @@ var SessionForm = /*#__PURE__*/function (_React$Component) {
     }
   }, {
     key: "handleErrors",
-    value: function handleErrors(error) {
+    value: function handleErrors(errType) {
       return this.props.errors.filter(function (error) {
-        return error.includes(error);
+        return error.includes(errType);
       });
     }
   }, {
@@ -691,7 +699,7 @@ var SessionForm = /*#__PURE__*/function (_React$Component) {
           className: "modal-header"
         }, "Welcome to ForkFull"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
           className: "error-list"
-        }, this.handleErrors('username')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        }, this.handleErrors('Username')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
           className: "login-form"
         }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
           type: "string",
@@ -701,7 +709,7 @@ var SessionForm = /*#__PURE__*/function (_React$Component) {
           placeholder: "Username"
         }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
           className: "error-list"
-        }, this.handleErrors('email')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        }, this.handleErrors('Email')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
           type: "string",
           value: this.state.email,
           onChange: this.update('email'),
@@ -709,7 +717,7 @@ var SessionForm = /*#__PURE__*/function (_React$Component) {
           placeholder: "Email"
         }), "`", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
           className: "error-list"
-        }, this.handleErrors('password')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
+        }, this.handleErrors('Password')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
           type: "password",
           value: this.state.password,
           onChange: this.update('password'),

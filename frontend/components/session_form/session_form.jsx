@@ -38,9 +38,9 @@ class SessionForm extends React.Component {
 
 
     
-     handleErrors(error){
+    handleErrors(errType){
                 
-        return this.props.errors.filter(error => error.includes(error))
+        return this.props.errors.filter(error => error.includes(errType))
     }
     
     handleSubmit(e) {
@@ -87,13 +87,14 @@ class SessionForm extends React.Component {
                 </div>
             );
         }
-          else { return (
+          else  {
+            return (
                     <div className="login-form-container">
                         <form onSubmit={this.handleSubmit} className="login-form-box">
                             <button onClick={this.props.closeModal} className="close-modal" >×</button>
                             <h1 className="modal-header">Welcome to ForkFull</h1>
 
-                            <ul className="error-list">{this.handleErrors('username')}</ul>
+                            <ul className="error-list">{this.handleErrors('Username')}</ul>
                             <div className="login-form">
                                 <input type="string"
                                     value={this.state.username}
@@ -102,7 +103,7 @@ class SessionForm extends React.Component {
                                     placeholder="Username"/>
                             
 
-                            <ul className="error-list">{this.handleErrors('email')}</ul>
+                            <ul className="error-list">{this.handleErrors('Email')}</ul>
                                 <input type= "string"
                                     value={this.state.email}
                                     onChange={this.update('email')}
@@ -111,7 +112,7 @@ class SessionForm extends React.Component {
                         `           
                         
                     
-                        <ul className="error-list">{this.handleErrors('password')}</ul>
+                        <ul className="error-list">{this.handleErrors('Password')}</ul>
                                 <input type="password"
                                     value={this.state.password}
                                     onChange={this.update('password')}

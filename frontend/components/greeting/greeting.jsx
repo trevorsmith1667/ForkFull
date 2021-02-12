@@ -1,4 +1,5 @@
 import React from 'react';
+import DropdownUser from '../nav/dropdown_user'
 
 
 
@@ -12,10 +13,10 @@ const Greeting = ({ currentUser, logout, openModal }) => {
     );
     const personalGreeting = () => (
         <hgroup className="header-group">
-            <h2 className="header-name">Hello, {currentUser.username}!</h2>
-            <button className="header-button" onClick={logout}>Log Out</button>
+            <DropdownUser/>
         </hgroup>
     );
+ 
 
     return (
         currentUser ?
