@@ -76,6 +76,8 @@ class SessionForm extends React.Component {
                                     onChange={this.update('password')}
                                     className="login-input"
                                     placeholder="Password"/>
+
+                                    
                             <button type="submit" className="login-button">Sign In</button>
                             <button className="demo-button" onClick={this.loginDemo}>Demo Sign In</button>
                         </div>
