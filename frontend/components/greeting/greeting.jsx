@@ -1,5 +1,6 @@
 import React from 'react';
-import { FaRegUser } from 'react-icons/fa';
+import { FaRegUserCircle } from 'react-icons/fa';
+import {Link} from  'react-router-dom'
 
 
 
@@ -13,13 +14,11 @@ const Greeting = ({ currentUser, logout, openModal }) => {
         </nav>
     );
     const personalGreeting = () => (
-        <hgroup className="header-group">
-            <div class="box arrow-top">
-                <FaRegUser/>
-            </div>
-            <h2 className="header-name">Hello, {currentUser.username}!</h2>
-            <button className="header-button" onClick={logout}>Log Out</button>
-        </hgroup>
+        <div className="user-dropdown arrow-top">
+            <div className="user-icon"><FaRegUserCircle size="25px"/></div>
+            <div className="dropdown-content">Hello, {currentUser.username}!</div>
+            <div className="dropdown-content" onClick={logout} >Log Out</div> 
+        </div>
     );
  
 
