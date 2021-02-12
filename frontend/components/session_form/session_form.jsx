@@ -57,8 +57,8 @@ class SessionForm extends React.Component {
         if (this.props.formType === 'login') {
             return (
                 <div className="login-form-container">
+                    <button onClick={this.props.closeModal} className="close-modal" >×</button>
                     <form onSubmit={this.handleSubmit} className="login-form-box">
-                        <button onClick={this.props.closeModal} className="close-modal" >×</button>
                         <h1 className="modal-header">Please Sign In</h1>
                         <ul className="error-list">{allErrors}</ul>
 
@@ -78,7 +78,7 @@ class SessionForm extends React.Component {
                                     placeholder="Password"/>
 
                                     
-                            <button type="submit" className="login-button">Sign In</button>
+                            <button type='submit' className="login-button">Sign In</button>
                             <button className="demo-button" onClick={this.loginDemo}>Demo Sign In</button>
                         </div>
                     </form>
@@ -92,8 +92,8 @@ class SessionForm extends React.Component {
           else  {
             return (
                     <div className="login-form-container">
-                        <form onSubmit={this.handleSubmit} className="login-form-box">
                             <button onClick={this.props.closeModal} className="close-modal" >×</button>
+                        <form onSubmit={this.handleSubmit} className="login-form-box">
                             <h1 className="modal-header">Welcome to ForkFull</h1>
 
                             <ul className="error-list">{this.handleErrors('Username')}</ul>
