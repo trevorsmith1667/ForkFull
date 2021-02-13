@@ -210,7 +210,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _util_route_util__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../util/route_util */ "./frontend/util/route_util.jsx");
 /* harmony import */ var _modal_modal__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./modal/modal */ "./frontend/components/modal/modal.jsx");
 /* harmony import */ var _components_nav_nav__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/nav/nav */ "./frontend/components/nav/nav.jsx");
-/* harmony import */ var _not_found__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./not_found */ "./frontend/components/not_found.js");
+/* harmony import */ var _not_found_jsx__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./not_found.jsx */ "./frontend/components/not_found.jsx");
 
 
 
@@ -229,7 +229,7 @@ var App = function App() {
     component: _components_nav_nav__WEBPACK_IMPORTED_MODULE_7__["default"]
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Route"], {
     path: "*",
-    component: _not_found__WEBPACK_IMPORTED_MODULE_8__["default"]
+    component: _not_found_jsx__WEBPACK_IMPORTED_MODULE_8__["default"]
   })));
 };
 
@@ -431,7 +431,7 @@ __webpack_require__.r(__webpack_exports__);
 var Nav = function Nav() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("header", {
     className: "nav"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Link"], {
     to: "/",
     className: "nav-header"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
@@ -448,10 +448,10 @@ var Nav = function Nav() {
 
 /***/ }),
 
-/***/ "./frontend/components/not_found.js":
-/*!******************************************!*\
-  !*** ./frontend/components/not_found.js ***!
-  \******************************************/
+/***/ "./frontend/components/not_found.jsx":
+/*!*******************************************!*\
+  !*** ./frontend/components/not_found.jsx ***!
+  \*******************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -738,7 +738,7 @@ var SessionForm = /*#__PURE__*/function (_React$Component) {
           onChange: this.update('email'),
           className: "login-input",
           placeholder: "Email"
-        }), "`", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+        }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
           className: "error-list"
         }, this.handleErrors('Password')), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", {
           type: "password",

@@ -8,7 +8,7 @@ import {ProtectedRoute} from '../util/route_util'
 import { AuthRoute } from '../util/route_util';
 import Modal from './modal/modal'
 import Nav from '../components/nav/nav'
-import NotFound from './not_found'
+import NotFound from './not_found.jsx'
 
 const App = () => (
     <div>

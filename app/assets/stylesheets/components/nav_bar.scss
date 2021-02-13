@@ -11,49 +11,34 @@
     position: relative;
     display: flex;
     justify-content: flex-end;
-    right: 5%;
-    padding: 0 16px;
-    top: 52px;
+    padding: 31px;
+
 }
 
 #nav-header-img {
-    position: absolute;
-    top: 23px;
+    position: relative;
     width: 85px;
-    height: 68px;
-    overflow: hidden;
+    height: 65px;
     display: flex;
-    justify-content: center;
-    text-decoration: none;
-    right: 0px;
+    bottom: 18px;
 }
 
 .nav-header { 
-    position: relative;
     display: flex;
     justify-content: center;
     align-content: center;
-    box-sizing: border-box;
-    background-color: #fff;
-    padding: 0px 0px 0px 0px;
-    right: 485px;
-    top: 8px;
-    height: 30px;
-    width: 19px;
+    background-color: white;
+    padding: 31px; 
+    text-decoration: none;
 }
 
 #app-title {
-   position: absolute;
-    top: 45px;
-    left: 8px;
+  position: relative;
     color: black;
     font-size: 25px;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: 600;
-    justify-content: left;
-    align-content: flex-start;
-    height: 30px;
-    width: 30px;
+    right: 7px;
 }
 
 
@@ -94,15 +79,12 @@
 
 
 .user-dropdown {
-    display: flex;
+   display: flex;
     cursor: pointer;
     justify-content: flex-end;
-    align-content: center;
-    width: 30px;
-    height: 30px;
-    top: 45px;
+    padding: 31px;
     position: relative;
-    right: 133px;
+    margin-right: 120px;
 }
 
 .dropdown-list { 
@@ -111,39 +93,34 @@
 
 .dropdown-greeting {
     position: relative;
+    display: flex;
     background-color: #eceeef;
     width: 352px;
     height: 33px;
     cursor: pointer;
-    justify-content: flex-end;
-    align-content: center;
-    right: 343px;
     font-family: 'Source Sans Pro';
     font-weight: 600;
     bottom: -7px;
     border-radius: 3px;
-    padding: 6px;
+    padding: 14px;
+    right: 354px;
 }
 
 .dropdown-signout { 
-    background-color: #eceeef;
-    justify-content: flex-end;
-    align-content: center;
     position: relative;
-    right: 343px;
+    background-color: #eceeef;
     height: 20px;
     width: 352px;
-    /* top: 106px; */
     font-family: 'Source Sans Pro';
     color: red;
-    padding: 6px;
+    padding: 14px;
     border-radius: 3px;
+    right: 354px;
 }
 
 .user-dropdown:hover .dropdown-list {
     display: block;
-    top: 35px;
-    position: absolute;
+    position: relative;
 }
 
 
@@ -151,13 +128,10 @@
     content: " ";
     width: 0px;
     height: 0px;
-    position: relative;
-    //top: 20px;
     border-top: none;
     border-right: 10px solid transparent;
     border-left: 10px solid transparent;
     border-bottom: 10px solid #eceeef;
-    left: 4px;
 }
 
 .user-icon {

@@ -111,7 +111,7 @@ class SessionForm extends React.Component {
                                     onChange={this.update('email')}
                                     className="login-input"
                                     placeholder="Email"/>
-                        `           
+                                   
                         
                     
                         <ul className="error-list">{this.handleErrors('Password')}</ul>
