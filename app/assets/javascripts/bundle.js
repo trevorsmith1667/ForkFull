@@ -227,13 +227,6 @@ var App = function App() {
     exact: true,
     path: "/",
     component: _components_nav_nav__WEBPACK_IMPORTED_MODULE_7__["default"]
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_5__["ProtectedRoute"], {
-    exact: true,
-    path: "/api/user",
-    component: _session_form_login_form_container__WEBPACK_IMPORTED_MODULE_3__["default"]
-  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_util_route_util__WEBPACK_IMPORTED_MODULE_5__["ProtectedRoute"], {
-    exact: true,
-    path: "/api/session"
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_4__["Route"], {
     path: "*",
     component: _not_found__WEBPACK_IMPORTED_MODULE_8__["default"]
@@ -469,7 +462,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var NotFound = function NotFound() {
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "404 Page NotFound");
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", null, "404 Page NotFound Well, this is embarrassing");
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (NotFound);

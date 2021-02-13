@@ -15,8 +15,8 @@ const App = () => (
         <Modal />
         <Switch>
             <Route exact path="/" component={Nav} />
-            <ProtectedRoute exact path="/api/user" component={LogInFormContainer} />
-            <ProtectedRoute exact path="/api/session" />
+            {/* <ProtectedRoute exact path="/api/user" component={LogInFormContainer} /> */}
+            {/* <ProtectedRoute exact path="/api/session" /> */}
             <Route path="*" component={NotFound} />
         </Switch>
     </div>
