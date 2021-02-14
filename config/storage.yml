@@ -6,10 +6,12 @@ local:
   service: Disk
   root: <%= Rails.root.join("storage") %>
 
- amazon_dev:
+# Use rails credentials:edit to set the AWS secrets (as aws:access_key_id|secret_access_key)
+amazon_dev:
   service: S3
   access_key_id: <%= Rails.application.credentials.aws[:access_key_id] %>
-  secret_access_key: <%= Rails.application.credentials.aws[:secret_access_key] %>
+  secret_access_key:
+    <%= Rails.application.credentials.aws[:secret_access_key] %>
   region: <%= Rails.application.credentials.aws[:region] %>
   bucket: <%= Rails.application.credentials.aws[:dev][:bucket] %>
 
@@ -20,10 +22,6 @@ amazon_prod:
     <%= Rails.application.credentials.aws[:secret_access_key] %>
   region: <%= Rails.application.credentials.aws[:region] %>
   bucket: <%= Rails.application.credentials.aws[:prod][:bucket] %>
-
-# Used as the base secret for all MessageVerifiers in Rails, including the one protecting cookies.
-# Use rails credentials:edit to set the AWS secrets (as aws:access_key_id|secret_access_key)
-
 
 # Remember not to checkin your GCS keyfile to a repository
 # google:
