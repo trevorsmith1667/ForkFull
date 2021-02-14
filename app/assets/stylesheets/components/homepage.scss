@@ -1,0 +1,37 @@
+.homepage {
+    position: relative;
+    justify-content: center;
+    display: flex;
+    z-index: 3;
+}
+
+#forkbg {
+   height: 416px;
+    width: 100%;
+}
+
+.background {
+    position: relative;
+    display: flex;
+    object-fit: cover;
+    width: 100%;
+    bottom: 50px;
+    z-index: -1;
+}
+
+.fourohfour {
+    align-content: center;
+    display: flex;
+    font-size: 20px;
+    left: -350px;
+    position: relative;
+}
+
+.not-found {
+     align-content: center;
+    display: block;
+    font-size: 20px;
+    position: relative;
+    left: 544px;
+    justify-content: flex-end;
+}

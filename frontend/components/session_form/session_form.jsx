@@ -126,6 +126,9 @@ class SessionForm extends React.Component {
 
                             </div>
                     </form>
+                    <span className="account-link">Already have an account? &nbsp;
+                         {this.props.otherForm}
+                    </span>  
                 </div>
 
             )

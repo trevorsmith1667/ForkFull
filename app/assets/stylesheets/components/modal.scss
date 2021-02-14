@@ -50,9 +50,6 @@
 
 
 
-//  .login-input:focus {
-//     border: 2px solid rgba(128, 128, 128, 0.8);
-//  }
 
  .login-button {
     width: 396px;
@@ -68,8 +65,14 @@
     //border-width: thin;
     margin-bottom: 6px;
     border: none;
+     transition: all 0.4s;
 
  }
+
+  .login-button:hover{
+    filter: brightness(87%);
+ }
+
 
  .demo-button { 
     width: 396px;
@@ -83,7 +86,11 @@
     padding-top: 5px;
     text-align: center;
     border: none;
+    transition: all 0.4s;
 
+ }
+ .demo-button:hover{
+    filter: brightness(87%);
  }
 
  .signup-button {
@@ -100,7 +107,11 @@
     //border-width: thin;
     margin-bottom: 6px;
     border: none;
+   transition: all 0.4s;
+ }
 
+ .signup-button:hover{
+    filter: brightness(87%);
  }
 
  .error-list{
@@ -153,3 +164,32 @@
     font-size: 20px;
 
  }
+
+ .account-link {
+    text-align: left;
+    padding: 0px 4px;
+    font-size: 18px;
+    line-height: 1;
+    display: block;
+    margin: 0;
+    padding-top: 8px;
+    font-family: 'Source Sans Pro', sans-serif;
+    box-sizing: border-box;
+    position: relative;
+    padding-left: 16px;
+    padding-right: 16px;
+    float: left;
+ }
+
+ .account-link > button {
+    font-family: 'Source Sans Pro', sans-serif;
+    border: none;
+    padding: 0px;
+    color: #da3743;
+    background-color: transparent;
+    font-size: 18px;
+ }
+
+ .button:hover:after {
+  background-color: #942c0d;
+}

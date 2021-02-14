@@ -9,15 +9,17 @@ import { AuthRoute } from '../util/route_util';
 import Modal from './modal/modal'
 import Nav from '../components/nav/nav'
 import NotFound from './not_found.jsx'
+import Homepage from './homepage/homepage'
 
 const App = () => (
     <div>
         <Modal />
+        <Nav/>
         <Switch>
-            <Route exact path="/" component={Nav} />
             {/* <ProtectedRoute exact path="/api/user" component={LogInFormContainer} /> */}
+        <Route exact path="/" component={Homepage}/>
             {/* <ProtectedRoute exact path="/api/session" /> */}
-            <Route path="*" component={NotFound} />
+        <Route  component={NotFound} />
         </Switch>
     </div>
 );
