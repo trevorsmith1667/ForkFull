@@ -18062,3 +18062,42 @@ Processing by StaticPagesController#root as HTML
 Completed 200 OK in 420ms (Views: 415.5ms | ActiveRecord: 0.8ms)
 
 
+Started GET "/" for ::1 at 2021-02-14 08:20:55 -0800
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/trevor/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+
+ActiveRecord::PendingMigrationError - Migrations are pending. To resolve this issue, run:
+        bin/rails db:migrate RAILS_ENV=development:
+
+Started POST "/__better_errors/265463948459efd4/variables" for ::1 at 2021-02-14 08:20:55 -0800
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(692626768931062665)[0m
+  ↳ /Users/trevor/.rbenv/versions/2.5.1/bin/rails:23
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/trevor/.rbenv/versions/2.5.1/bin/rails:23
+Migrating to CreateRestaurants (20210214161824)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/trevor/.rbenv/versions/2.5.1/bin/rails:23
+  [1m[35m (47.4ms)[0m  [1m[35mCREATE TABLE "restaurants" ("id" bigserial primary key, "address" character varying NOT NULL, "name" character varying NOT NULL, "about" text NOT NULL, "cuisine" character varying NOT NULL, "city" character varying NOT NULL, "phone_number" character varying NOT NULL, "state" character varying NOT NULL, "price" character varying NOT NULL, "average_rating" float NOT NULL, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20210214161824_create_restaurants.rb:3
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_restaurants_on_name" ON "restaurants"  ("name")[0m
+  ↳ db/migrate/20210214161824_create_restaurants.rb:15
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE  INDEX  "index_restaurants_on_city" ON "restaurants"  ("city")[0m
+  ↳ db/migrate/20210214161824_create_restaurants.rb:16
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE  INDEX  "index_restaurants_on_cuisine" ON "restaurants"  ("cuisine")[0m
+  ↳ db/migrate/20210214161824_create_restaurants.rb:17
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE  INDEX  "index_restaurants_on_average_rating" ON "restaurants"  ("average_rating")[0m
+  ↳ db/migrate/20210214161824_create_restaurants.rb:18
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210214161824"]]
+  ↳ /Users/trevor/.rbenv/versions/2.5.1/bin/rails:23
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/trevor/.rbenv/versions/2.5.1/bin/rails:23
+  [1m[36mActiveRecord::InternalMetadata Load (5.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/trevor/.rbenv/versions/2.5.1/bin/rails:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/trevor/.rbenv/versions/2.5.1/bin/rails:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/trevor/.rbenv/versions/2.5.1/bin/rails:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(692626768931062665)[0m
+  ↳ /Users/trevor/.rbenv/versions/2.5.1/bin/rails:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/trevor/.rbenv/versions/2.5.1/bin/rails:23
