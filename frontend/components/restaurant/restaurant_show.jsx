@@ -11,8 +11,15 @@ class RestaurantShow extends React.Component {
     }
 
     render(){
+        <input
+            type="file"
+            onChange={e => this.setState({ photos: e.target.files })}
+            multiple
+        />
         return (
-            <div>nothing yet</div>
+            <div>
+                stuff
+                </div>
 
         )
     }
