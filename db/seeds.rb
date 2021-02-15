@@ -25,8 +25,8 @@ Restaurant.delete_all
   price: '$$$',
   phone_number: '(415) 567-5432',
   address: '1722 Sacramento St. San Francisco, CA 94109'
-
  )
+
  p1 = open("https://app-forkfull-seeds.s3-us-west-1.amazonaws.com/forkfullrestimg/acq1.png")
  p2 = open('https://app-forkfull-seeds.s3-us-west-1.amazonaws.com/forkfullrestimg/acq2.png')
  p3 = open('https://app-forkfull-seeds.s3-us-west-1.amazonaws.com/forkfullrestimg/acq3.png')

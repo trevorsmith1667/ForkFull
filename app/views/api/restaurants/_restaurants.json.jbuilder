@@ -1,1 +1,1 @@
-json.extract! restaurant, :id, :name, :cuisine, :price, :phone_number, :about, :city, :state, :average_rating
+json.extract! restaurant, :id, :name, :cuisine, :price, :phone_number, :about, :city, :state

@@ -12,7 +12,7 @@ class Api::RestaurantsController < ApplicationController
 
     private
     def restaurant_params
-        params.require(:restaurant).permit(:name, :cuisine, :price, :phone_number, :about, :city, :state, :average_rating, photos: [])
+        params.require(:restaurant).permit(:name, :cuisine, :price, :phone_number, :about, :city, :state, photos: [])
     end 
 
 end
