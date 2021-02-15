@@ -18112,3 +18112,352 @@ Processing by StaticPagesController#root as HTML
 Completed 200 OK in 1534ms (Views: 1506.9ms | ActiveRecord: 23.9ms)
 
 
+Started GET "/" for ::1 at 2021-02-14 12:58:23 -0800
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (26.0ms)
+Completed 200 OK in 141ms (Views: 133.5ms | ActiveRecord: 3.3ms)
+
+
+  [1m[35m (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurant Create (31.8ms)[0m  [1m[32mINSERT INTO "restaurants" ("address", "name", "about", "cuisine", "city", "phone_number", "state", "price", "average_rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["address", "g"], ["name", "g"], ["about", "tet"], ["cuisine", "h"], ["city", "sf"], ["phone_number", "dsfgsdg"], ["state", "df"], ["price", "grg"], ["average_rating", 0.05], ["created_at", "2021-02-14 21:29:19.648020"], ["updated_at", "2021-02-14 21:29:19.648020"]]
+  [1m[35m (6.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveStorage::Attachment Exists (8.2ms)[0m  [1m[34mSELECT  1 AS one FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Restaurant"], ["name", "photos"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurant Create (11.1ms)[0m  [1m[32mINSERT INTO "restaurants" ("address", "name", "about", "cuisine", "city", "phone_number", "state", "price", "average_rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["address", "g"], ["name", "g"], ["about", "tet"], ["cuisine", "h"], ["city", "sf"], ["phone_number", "dsfgsdg"], ["state", "df"], ["price", "grg"], ["average_rating", 0.05], ["created_at", "2021-02-14 21:53:03.216748"], ["updated_at", "2021-02-14 21:53:03.216748"]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurant Create (5.3ms)[0m  [1m[32mINSERT INTO "restaurants" ("address", "name", "about", "cuisine", "city", "phone_number", "state", "price", "average_rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["address", "g"], ["name", "g"], ["about", "tet"], ["cuisine", "h"], ["city", "sf"], ["phone_number", "dsfgsdg"], ["state", "df"], ["price", "grg"], ["average_rating", 0.05], ["created_at", "2021-02-14 22:00:03.148366"], ["updated_at", "2021-02-14 22:00:03.148366"]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mRestaurant Create (5.2ms)[0m  [1m[32mINSERT INTO "restaurants" ("address", "name", "about", "cuisine", "city", "phone_number", "state", "price", "average_rating", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["address", "g"], ["name", "hjh"], ["about", "tet"], ["cuisine", "h"], ["city", "sf"], ["phone_number", "dsfgsdg"], ["state", "df"], ["price", "grg"], ["average_rating", 0.05], ["created_at", "2021-02-14 22:01:27.690864"], ["updated_at", "2021-02-14 22:01:27.690864"]]
+  [1m[35m (5.2ms)[0m  [1m[35mCOMMIT[0m
+[36m  S3 Storage (616.7ms) [0m[32mUploaded file to key: gnhCSc6xv36RB11UDkmwLQfT (checksum: XLd+D2uu2HffkQ96IJ2hgA==)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveStorage::Blob Create (7.1ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "gnhCSc6xv36RB11UDkmwLQfT"], ["filename", "benu1.png"], ["content_type", "image/png"], ["metadata", "{\"identified\":true}"], ["byte_size", 205598], ["checksum", "XLd+D2uu2HffkQ96IJ2hgA=="], ["created_at", "2021-02-14 22:07:19.168584"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveStorage::Attachment Create (12.2ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "photos"], ["record_type", "Restaurant"], ["record_id", 4], ["blob_id", 1], ["created_at", "2021-02-14 22:07:19.195353"]]
+  [1m[36mRestaurant Update (6.9ms)[0m  [1m[33mUPDATE "restaurants" SET "updated_at" = $1 WHERE "restaurants"."id" = $2[0m  [["updated_at", "2021-02-14 22:07:19.208129"], ["id", 4]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 41a33fa1-d520-4215-8437-23bd24c1b584) to Async(default) with arguments: #<GlobalID:0x00007f90f857bcd8 @uri=#<URI::GID gid://forkfull/ActiveStorage::Blob/1>>
+  [1m[36mActiveStorage::Blob Load (1.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [41a33fa1-d520-4215-8437-23bd24c1b584] Performing ActiveStorage::AnalyzeJob (Job ID: 41a33fa1-d520-4215-8437-23bd24c1b584) from Async(default) with arguments: #<GlobalID:0x00007f90ea07dcd0 @uri=#<URI::GID gid://forkfull/ActiveStorage::Blob/1>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [41a33fa1-d520-4215-8437-23bd24c1b584] [36m  S3 Storage (114.2ms) [0m[34mDownloaded file from key: gnhCSc6xv36RB11UDkmwLQfT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [41a33fa1-d520-4215-8437-23bd24c1b584] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [41a33fa1-d520-4215-8437-23bd24c1b584]   [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [41a33fa1-d520-4215-8437-23bd24c1b584]   [1m[36mActiveStorage::Blob Update (1.3ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [41a33fa1-d520-4215-8437-23bd24c1b584]   [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [41a33fa1-d520-4215-8437-23bd24c1b584] Performed ActiveStorage::AnalyzeJob (Job ID: 41a33fa1-d520-4215-8437-23bd24c1b584) from Async(default) in 149.72ms
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(692626768931062665)[0m
+  ↳ /Users/trevor/.rbenv/versions/2.5.1/bin/rails:23
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/trevor/.rbenv/versions/2.5.1/bin/rails:23
+Migrating to RemovingAverageprice (20210215000338)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/trevor/.rbenv/versions/2.5.1/bin/rails:23
+  [1m[35m (13.2ms)[0m  [1m[35mALTER TABLE "restaurants" DROP COLUMN "average_price"[0m
+  ↳ db/migrate/20210215000338_removing_averageprice.rb:3
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /Users/trevor/.rbenv/versions/2.5.1/bin/rails:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(692626768931062665)[0m
+  ↳ /Users/trevor/.rbenv/versions/2.5.1/bin/rails:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(692626768931062665)[0m
+  ↳ /Users/trevor/.rbenv/versions/2.5.1/bin/rails:23
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/trevor/.rbenv/versions/2.5.1/bin/rails:23
+Migrating to RemovingAverageprice (20210215000447)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/trevor/.rbenv/versions/2.5.1/bin/rails:23
+  [1m[35m (18.1ms)[0m  [1m[35mALTER TABLE "restaurants" DROP COLUMN "average_rating"[0m
+  ↳ db/migrate/20210215000447_removing_averageprice.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210215000447"]]
+  ↳ /Users/trevor/.rbenv/versions/2.5.1/bin/rails:23
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/trevor/.rbenv/versions/2.5.1/bin/rails:23
+  [1m[36mActiveRecord::InternalMetadata Load (6.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/trevor/.rbenv/versions/2.5.1/bin/rails:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/trevor/.rbenv/versions/2.5.1/bin/rails:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/trevor/.rbenv/versions/2.5.1/bin/rails:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(692626768931062665)[0m
+  ↳ /Users/trevor/.rbenv/versions/2.5.1/bin/rails:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/trevor/.rbenv/versions/2.5.1/bin/rails:23
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/trevor/.rbenv/versions/2.5.1/bin/rails:23
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/trevor/.rbenv/versions/2.5.1/bin/rails:23
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/trevor/.rbenv/versions/2.5.1/bin/rails:23
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/trevor/.rbenv/versions/2.5.1/bin/rails:23
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/trevor/.rbenv/versions/2.5.1/bin/rails:23
+  [1m[36mUser Destroy (2.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ db/seeds.rb:8
+  [1m[36mRestaurant Destroy (7.5ms)[0m  [1m[31mDELETE FROM "restaurants"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mUser Exists (5.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo_user@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "uWR+z6ANmsgkfgtyJnIARw=="], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[36mUser Create (2.9ms)[0m  [1m[32mINSERT INTO "users" ("email", "username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "demo_user@gmail.com"], ["username", "demo_user"], ["password_digest", "$2a$12$tqQOGPsPN3WSSAzKgJLWP.1bkgg4wWfROxQR3uQwnm5sblyFF7sL."], ["session_token", "uWR+z6ANmsgkfgtyJnIARw=="], ["created_at", "2021-02-15 00:10:09.724948"], ["updated_at", "2021-02-15 00:10:09.724948"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(692626768931062665)[0m
+  ↳ /Users/trevor/.rbenv/versions/2.5.1/bin/rails:23
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/trevor/.rbenv/versions/2.5.1/bin/rails:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/trevor/.rbenv/versions/2.5.1/bin/rails:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/trevor/.rbenv/versions/2.5.1/bin/rails:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/trevor/.rbenv/versions/2.5.1/bin/rails:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(692626768931062665)[0m
+  ↳ /Users/trevor/.rbenv/versions/2.5.1/bin/rails:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/trevor/.rbenv/versions/2.5.1/bin/rails:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(692626768931062665)[0m
+  ↳ /Users/trevor/.rbenv/versions/2.5.1/bin/rails:23
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/trevor/.rbenv/versions/2.5.1/bin/rails:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/trevor/.rbenv/versions/2.5.1/bin/rails:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /Users/trevor/.rbenv/versions/2.5.1/bin/rails:23
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /Users/trevor/.rbenv/versions/2.5.1/bin/rails:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(692626768931062665)[0m
+  ↳ /Users/trevor/.rbenv/versions/2.5.1/bin/rails:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/trevor/.rbenv/versions/2.5.1/bin/rails:23
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/trevor/.rbenv/versions/2.5.1/bin/rails:23
+  [1m[36mUser Destroy (3.1ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ db/seeds.rb:8
+  [1m[36mRestaurant Destroy (1.5ms)[0m  [1m[31mDELETE FROM "restaurants"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mUser Exists (1.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo_user@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "qARRi7BxMIxuvg4pIgs9UA=="], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[36mUser Create (1.6ms)[0m  [1m[32mINSERT INTO "users" ("email", "username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "demo_user@gmail.com"], ["username", "demo_user"], ["password_digest", "$2a$12$YuWwPvfabV6Zj19z.qmSKOJbWWUBQQoZt87EsEAtk3ZpCcA5FOJHe"], ["session_token", "qARRi7BxMIxuvg4pIgs9UA=="], ["created_at", "2021-02-15 00:12:16.708103"], ["updated_at", "2021-02-15 00:12:16.708103"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mRestaurant Create (0.7ms)[0m  [1m[32mINSERT INTO "restaurants" ("address", "name", "about", "cuisine", "city", "phone_number", "state", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["address", "1722 Sacramento St. San Francisco, CA 94109"], ["name", "Acquerello"], ["about", "Since 1989 Acquerello has raised the bar in San Francisco for Italian fine dining. In the Nob Hill region of the city,  this two Michelin starred restaurant continually delivers refined luxury and contemporary Italian tastes."], ["cuisine", "Italian"], ["city", "San Francisco"], ["phone_number", "(415) 567-5432"], ["state", "CA"], ["price", "$$$"], ["created_at", "2021-02-15 00:12:16.731743"], ["updated_at", "2021-02-15 00:12:16.731743"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mRestaurant Create (1.0ms)[0m  [1m[32mINSERT INTO "restaurants" ("address", "name", "about", "cuisine", "city", "phone_number", "state", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["address", "3127 Fillmore St, San Francisco, CA 94123"], ["name", "Atelier Crenn"], ["about", "Dominique Crenn  is the visionary behind the inspired tasting menu concept, based on the incorporation of Poetic Culinaria.  Chef Crenn’s imaginative artistry and distinctive French heritage are reflected in every bite."], ["cuisine", "French"], ["city", "San Francisco"], ["phone_number", "(415) 440-0460"], ["state", "California"], ["price", "$$$$"], ["created_at", "2021-02-15 00:12:16.733517"], ["updated_at", "2021-02-15 00:12:16.733517"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:43
+  [1m[36mRestaurant Create (0.5ms)[0m  [1m[32mINSERT INTO "restaurants" ("address", "name", "about", "cuisine", "city", "phone_number", "state", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["address", "22 Hawthorne Street San Francisco CA 94105"], ["name", "Benu"], ["about", "Opened in 2010, Benu is the pinnacle of approachable fine dining. A nuanced menu blends culinary traditions ranging from Korean to Cantonese, using local produce and western technique. The result is a perfect amalgamation of influence inherent to modern American cuisine."], ["cuisine", "Modern American"], ["city", "San Francisco"], ["phone_number", "(415)685-4860"], ["state", "California"], ["price", "$$$$"], ["created_at", "2021-02-15 00:12:16.735472"], ["updated_at", "2021-02-15 00:12:16.735472"]]
+  ↳ db/seeds.rb:43
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:43
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:54
+  [1m[36mRestaurant Create (0.5ms)[0m  [1m[32mINSERT INTO "restaurants" ("address", "name", "about", "cuisine", "city", "phone_number", "state", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["address", "149 Fell St, San Francisco, CA 94102"], ["name", "Cala"], ["about", "Sustainably sourced Mexican seafood from esteemed Mexico city chef Gabriela Cámara."], ["cuisine", "Mexican"], ["city", "San Francisco"], ["phone_number", "(415)660-7701"], ["state", "California"], ["price", "$$$"], ["created_at", "2021-02-15 00:12:16.737345"], ["updated_at", "2021-02-15 00:12:16.737345"]]
+  ↳ db/seeds.rb:54
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:54
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:66
+  [1m[36mRestaurant Create (0.4ms)[0m  [1m[32mINSERT INTO "restaurants" ("address", "name", "about", "cuisine", "city", "phone_number", "state", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["address", "355 11th Street, San Francisco, CA, 94102"], ["name", "Californios"], ["about", "Californios is a family owned and operated California Mexican restaurant. The cuisine is a contemporary expression of Mexican cuisine, utilizing the plentiful local ingredients of the Bay Area. Chef Val M. Cantu and co. have created a one of a kind tasting menu and the wine team  makes the perfect complement."], ["cuisine", "Mexican"], ["city", "San Francisco"], ["phone_number", "(415)-757-0994"], ["state", "California"], ["price", "$$$$"], ["created_at", "2021-02-15 00:12:16.738630"], ["updated_at", "2021-02-15 00:12:16.738630"]]
+  ↳ db/seeds.rb:66
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:66
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:78
+  [1m[36mRestaurant Create (0.4ms)[0m  [1m[32mINSERT INTO "restaurants" ("address", "name", "about", "cuisine", "city", "phone_number", "state", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["address", "4 Mint Plaza San Francisco, CA, 94102"], ["name", "Hashiri"], ["about", "hashiri stays true to the roots of its original location in Tokyo, along the way curating a bounty of seasonal ingredients and traditional methods."], ["cuisine", "Japanese"], ["city", "San Francisco"], ["phone_number", "(415)-908-1919"], ["state", "California"], ["price", "$$$"], ["created_at", "2021-02-15 00:12:16.740077"], ["updated_at", "2021-02-15 00:12:16.740077"]]
+  ↳ db/seeds.rb:78
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:78
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:89
+  [1m[36mRestaurant Create (0.4ms)[0m  [1m[32mINSERT INTO "restaurants" ("address", "name", "about", "cuisine", "city", "phone_number", "state", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["address", "3416 19th St, San Francisco, CA 94110"], ["name", "Lazy Bear"], ["about", "Lazy Bear keeps the focus away from the conventional while holding a special place for wild techniques, serving modern American creations and  delivering a essential dining experience. With its communal dining and social atmosphere, Lazy Bear is one of a kind."], ["cuisine", "Modern American"], ["city", "San Francisco"], ["phone_number", "(415)-874-9921"], ["state", "California"], ["price", "$$$"], ["created_at", "2021-02-15 00:12:16.741495"], ["updated_at", "2021-02-15 00:12:16.741495"]]
+  ↳ db/seeds.rb:89
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:89
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:100
+  [1m[36mRestaurant Create (0.4ms)[0m  [1m[32mINSERT INTO "restaurants" ("address", "name", "about", "cuisine", "city", "phone_number", "state", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["address", "2234 Mission Street, San Francisco, CA"], ["name", "Mission Chinese"], ["about", "Here is the original brainchild of  Chef Danny Bowien who delivers his spicy, creative takes on a twist between American  and Chinese cuisine. The menu showcases an awe inspiring\n  blend of Sichuan heat and spice, served  in a casual relaxed space."], ["cuisine", "Chinese"], ["city", "San Francisco"], ["phone_number", "(415)863-2800"], ["state", "California"], ["price", "$$"], ["created_at", "2021-02-15 00:12:16.742862"], ["updated_at", "2021-02-15 00:12:16.742862"]]
+  ↳ db/seeds.rb:100
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:100
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:113
+  [1m[36mRestaurant Create (1.9ms)[0m  [1m[32mINSERT INTO "restaurants" ("address", "name", "about", "cuisine", "city", "phone_number", "state", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["address", "1335 Fulton Street, San Francisco, CA"], ["name", "Ju Ni"], ["about", "Ju Ni is a small cozy 12 seat omakase bar in downtown San Francisco combining technique and tradition. Every 4 guests gets a personal chef to handcraft a unique intimate dining experience."], ["cuisine", "Japanese"], ["city", "San Francisco"], ["phone_number", "(415)655-9924"], ["state", "California"], ["price", "$$$"], ["created_at", "2021-02-15 00:12:16.744294"], ["updated_at", "2021-02-15 00:12:16.744294"]]
+  ↳ db/seeds.rb:113
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:113
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:125
+  [1m[36mRestaurant Create (0.4ms)[0m  [1m[32mINSERT INTO "restaurants" ("address", "name", "about", "cuisine", "city", "phone_number", "state", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["address", "555 California Street Concourse Level, San Francisco, CA"], ["name", "Trestle SF"], ["about", "Trestle SF is an affordable fine dining tasting menu experience that marries fresh seasonal ingredients with a new menu every day."], ["cuisine", "Modern American"], ["city", "San Francisco"], ["phone_number", "(415)772-0922"], ["state", "California"], ["price", "$$"], ["created_at", "2021-02-15 00:12:16.747086"], ["updated_at", "2021-02-15 00:12:16.747086"]]
+  ↳ db/seeds.rb:125
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:125
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/trevor/.rbenv/versions/2.5.1/bin/rails:23
+  [1m[36mUser Destroy (3.2ms)[0m  [1m[31mDELETE FROM "users"[0m
+  ↳ db/seeds.rb:8
+  [1m[36mRestaurant Destroy (2.0ms)[0m  [1m[31mDELETE FROM "restaurants"[0m
+  ↳ db/seeds.rb:9
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:17
+  [1m[36mUser Exists (1.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo_user@gmail.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[36mUser Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "sWFoUC/IJmAbmfgbP+q2/Q=="], ["LIMIT", 1]]
+  ↳ db/seeds.rb:17
+  [1m[36mUser Create (1.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["email", "demo_user@gmail.com"], ["username", "demo_user"], ["password_digest", "$2a$12$tUoAancjucpUXvkhcRSfh.JuVpskjrskrLXblS8gXrqu7gzWeKGge"], ["session_token", "sWFoUC/IJmAbmfgbP+q2/Q=="], ["created_at", "2021-02-15 00:13:17.941772"], ["updated_at", "2021-02-15 00:13:17.941772"]]
+  ↳ db/seeds.rb:17
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:17
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:19
+  [1m[36mRestaurant Create (0.8ms)[0m  [1m[32mINSERT INTO "restaurants" ("address", "name", "about", "cuisine", "city", "phone_number", "state", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["address", "1722 Sacramento St. San Francisco, CA 94109"], ["name", "Acquerello"], ["about", "Since 1989 Acquerello has raised the bar in San Francisco for Italian fine dining. In the Nob Hill region of the city,  this two Michelin starred restaurant continually delivers refined luxury and contemporary Italian tastes."], ["cuisine", "Italian"], ["city", "San Francisco"], ["phone_number", "(415) 567-5432"], ["state", "CA"], ["price", "$$$"], ["created_at", "2021-02-15 00:13:17.965171"], ["updated_at", "2021-02-15 00:13:17.965171"]]
+  ↳ db/seeds.rb:19
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:19
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:31
+  [1m[36mRestaurant Create (0.6ms)[0m  [1m[32mINSERT INTO "restaurants" ("address", "name", "about", "cuisine", "city", "phone_number", "state", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["address", "3127 Fillmore St, San Francisco, CA 94123"], ["name", "Atelier Crenn"], ["about", "Dominique Crenn  is the visionary behind the inspired tasting menu concept, based on the incorporation of Poetic Culinaria.  Chef Crenn’s imaginative artistry and distinctive French heritage are reflected in every bite."], ["cuisine", "French"], ["city", "San Francisco"], ["phone_number", "(415) 440-0460"], ["state", "California"], ["price", "$$$$"], ["created_at", "2021-02-15 00:13:17.967031"], ["updated_at", "2021-02-15 00:13:17.967031"]]
+  ↳ db/seeds.rb:31
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:31
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:43
+  [1m[36mRestaurant Create (0.5ms)[0m  [1m[32mINSERT INTO "restaurants" ("address", "name", "about", "cuisine", "city", "phone_number", "state", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["address", "22 Hawthorne Street San Francisco CA 94105"], ["name", "Benu"], ["about", "Opened in 2010, Benu is the pinnacle of approachable fine dining. A nuanced menu blends culinary traditions ranging from Korean to Cantonese, using local produce and western technique. The result is a perfect amalgamation of influence inherent to modern American cuisine."], ["cuisine", "Modern American"], ["city", "San Francisco"], ["phone_number", "(415)685-4860"], ["state", "California"], ["price", "$$$$"], ["created_at", "2021-02-15 00:13:17.968516"], ["updated_at", "2021-02-15 00:13:17.968516"]]
+  ↳ db/seeds.rb:43
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:43
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:54
+  [1m[36mRestaurant Create (0.4ms)[0m  [1m[32mINSERT INTO "restaurants" ("address", "name", "about", "cuisine", "city", "phone_number", "state", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["address", "149 Fell St, San Francisco, CA 94102"], ["name", "Cala"], ["about", "Sustainably sourced Mexican seafood from esteemed Mexico city chef Gabriela Cámara."], ["cuisine", "Mexican"], ["city", "San Francisco"], ["phone_number", "(415)660-7701"], ["state", "California"], ["price", "$$$"], ["created_at", "2021-02-15 00:13:17.969878"], ["updated_at", "2021-02-15 00:13:17.969878"]]
+  ↳ db/seeds.rb:54
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:54
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:66
+  [1m[36mRestaurant Create (0.5ms)[0m  [1m[32mINSERT INTO "restaurants" ("address", "name", "about", "cuisine", "city", "phone_number", "state", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["address", "355 11th Street, San Francisco, CA, 94102"], ["name", "Californios"], ["about", "Californios is a family owned and operated California Mexican restaurant. The cuisine is a contemporary expression of Mexican cuisine, utilizing the plentiful local ingredients of the Bay Area. Chef Val M. Cantu and co. have created a one of a kind tasting menu and the wine team  makes the perfect complement."], ["cuisine", "Mexican"], ["city", "San Francisco"], ["phone_number", "(415)-757-0994"], ["state", "California"], ["price", "$$$$"], ["created_at", "2021-02-15 00:13:17.971213"], ["updated_at", "2021-02-15 00:13:17.971213"]]
+  ↳ db/seeds.rb:66
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:66
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:78
+  [1m[36mRestaurant Create (0.4ms)[0m  [1m[32mINSERT INTO "restaurants" ("address", "name", "about", "cuisine", "city", "phone_number", "state", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["address", "4 Mint Plaza San Francisco, CA, 94102"], ["name", "Hashiri"], ["about", "hashiri stays true to the roots of its original location in Tokyo, along the way curating a bounty of seasonal ingredients and traditional methods."], ["cuisine", "Japanese"], ["city", "San Francisco"], ["phone_number", "(415)-908-1919"], ["state", "California"], ["price", "$$$"], ["created_at", "2021-02-15 00:13:17.972524"], ["updated_at", "2021-02-15 00:13:17.972524"]]
+  ↳ db/seeds.rb:78
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:78
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:89
+  [1m[36mRestaurant Create (0.4ms)[0m  [1m[32mINSERT INTO "restaurants" ("address", "name", "about", "cuisine", "city", "phone_number", "state", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["address", "3416 19th St, San Francisco, CA 94110"], ["name", "Lazy Bear"], ["about", "Lazy Bear keeps the focus away from the conventional while holding a special place for wild techniques, serving modern American creations and  delivering a essential dining experience. With its communal dining and social atmosphere, Lazy Bear is one of a kind."], ["cuisine", "Modern American"], ["city", "San Francisco"], ["phone_number", "(415)-874-9921"], ["state", "California"], ["price", "$$$"], ["created_at", "2021-02-15 00:13:17.973875"], ["updated_at", "2021-02-15 00:13:17.973875"]]
+  ↳ db/seeds.rb:89
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:89
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:100
+  [1m[36mRestaurant Create (1.1ms)[0m  [1m[32mINSERT INTO "restaurants" ("address", "name", "about", "cuisine", "city", "phone_number", "state", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["address", "2234 Mission Street, San Francisco, CA"], ["name", "Mission Chinese"], ["about", "Here is the original brainchild of  Chef Danny Bowien who delivers his spicy, creative takes on a twist between American  and Chinese cuisine. The menu showcases an awe inspiring\n  blend of Sichuan heat and spice, served  in a casual relaxed space."], ["cuisine", "Chinese"], ["city", "San Francisco"], ["phone_number", "(415)863-2800"], ["state", "California"], ["price", "$$"], ["created_at", "2021-02-15 00:13:17.975294"], ["updated_at", "2021-02-15 00:13:17.975294"]]
+  ↳ db/seeds.rb:100
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:100
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:113
+  [1m[36mRestaurant Create (0.4ms)[0m  [1m[32mINSERT INTO "restaurants" ("address", "name", "about", "cuisine", "city", "phone_number", "state", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["address", "1335 Fulton Street, San Francisco, CA"], ["name", "Ju Ni"], ["about", "Ju Ni is a small cozy 12 seat omakase bar in downtown San Francisco combining technique and tradition. Every 4 guests gets a personal chef to handcraft a unique intimate dining experience."], ["cuisine", "Japanese"], ["city", "San Francisco"], ["phone_number", "(415)655-9924"], ["state", "California"], ["price", "$$$"], ["created_at", "2021-02-15 00:13:17.977496"], ["updated_at", "2021-02-15 00:13:17.977496"]]
+  ↳ db/seeds.rb:113
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:113
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:125
+  [1m[36mRestaurant Create (0.4ms)[0m  [1m[32mINSERT INTO "restaurants" ("address", "name", "about", "cuisine", "city", "phone_number", "state", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["address", "555 California Street Concourse Level, San Francisco, CA"], ["name", "Trestle SF"], ["about", "Trestle SF is an affordable fine dining tasting menu experience that marries fresh seasonal ingredients with a new menu every day."], ["cuisine", "Modern American"], ["city", "San Francisco"], ["phone_number", "(415)772-0922"], ["state", "California"], ["price", "$$"], ["created_at", "2021-02-15 00:13:17.978894"], ["updated_at", "2021-02-15 00:13:17.978894"]]
+  ↳ db/seeds.rb:125
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:125
+Started GET "/" for ::1 at 2021-02-14 16:14:05 -0800
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/trevor/.rbenv/versions/2.5.1/lib/ruby/gems/2.5.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by StaticPagesController#root as HTML
+  Rendering static_pages/root.html.erb within layouts/application
+  [1m[36mUser Load (5.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  Rendered static_pages/root.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 1038ms (Views: 1027.9ms | ActiveRecord: 8.6ms)
+
+
+Started POST "/api/user" for ::1 at 2021-02-14 16:15:15 -0800
+Processing by Api::UsersController#create as JSON
+  Parameters: {"user"=>{"username"=>"", "email"=>"", "password"=>"[FILTERED]"}}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/api/users_controller.rb:6
+  [1m[36mUser Exists (3.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", ""], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:6
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "hj99Z6WGx/it+TciIqTrHQ=="], ["LIMIT", 1]]
+  ↳ app/controllers/api/users_controller.rb:6
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/api/users_controller.rb:6
+Completed 422 Unprocessable Entity in 305ms (Views: 0.1ms | ActiveRecord: 17.5ms)
+
+
+Started POST "/api/session" for ::1 at 2021-02-14 16:15:17 -0800
+Processing by Api::SessionsController#create as JSON
+  Parameters: {"user"=>{"email"=>"demo_user@gmail.com", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo_user@gmail.com"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:20
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:43
+  [1m[36mUser Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo_user@gmail.com"], ["id", 16], ["LIMIT", 1]]
+  ↳ app/models/user.rb:43
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "CW7UyBTQ5ljOAYeOYdOlOA=="], ["id", 16], ["LIMIT", 1]]
+  ↳ app/models/user.rb:43
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "CW7UyBTQ5ljOAYeOYdOlOA=="], ["updated_at", "2021-02-15 00:15:17.543795"], ["id", 16]]
+  ↳ app/models/user.rb:43
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:43
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.1ms)
+  Rendered api/users/show.json.jbuilder (1.1ms)
+Completed 200 OK in 300ms (Views: 4.8ms | ActiveRecord: 8.4ms)
+
+
+Started DELETE "/api/session" for ::1 at 2021-02-14 16:15:22 -0800
+Processing by Api::SessionsController#destroy as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "CW7UyBTQ5ljOAYeOYdOlOA=="], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:5
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/models/user.rb:43
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "demo_user@gmail.com"], ["id", 16], ["LIMIT", 1]]
+  ↳ app/models/user.rb:43
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."session_token" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["session_token", "xsQvyLCs0krbHR0s8SV6BQ=="], ["id", 16], ["LIMIT", 1]]
+  ↳ app/models/user.rb:43
+  [1m[36mUser Update (0.5ms)[0m  [1m[33mUPDATE "users" SET "session_token" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["session_token", "xsQvyLCs0krbHR0s8SV6BQ=="], ["updated_at", "2021-02-15 00:15:22.157252"], ["id", 16]]
+  ↳ app/models/user.rb:43
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/models/user.rb:43
+  Rendering api/users/show.json.jbuilder
+  Rendered api/users/_user.json.jbuilder (0.2ms)
+  Rendered api/users/show.json.jbuilder (0.8ms)
+Completed 200 OK in 9ms (Views: 4.0ms | ActiveRecord: 2.5ms)
+
+
