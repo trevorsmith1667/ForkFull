@@ -1,6 +1,6 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-require 'open-uri'
+require "open-uri"
 # Examples:
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
@@ -27,10 +27,10 @@ Restaurant.delete_all
   address: '1722 Sacramento St. San Francisco, CA 94109'
 
  )
- p1 = URI.open('https://app-forkfull-seeds.s3-us-west-1.amazonaws.com/forkfullrestimg/acq1.png')
- p2 = URI.open('https://app-forkfull-seeds.s3-us-west-1.amazonaws.com/forkfullrestimg/acq2.png')
- p3 = URI.open('https://app-forkfull-seeds.s3-us-west-1.amazonaws.com/forkfullrestimg/acq3.png')
- p4 = URI.open('https://app-forkfull-seeds.s3-us-west-1.amazonaws.com/forkfullrestimg/acq4.png')
+ p1 = open("https://app-forkfull-seeds.s3-us-west-1.amazonaws.com/forkfullrestimg/acq1.png")
+ p2 = open('https://app-forkfull-seeds.s3-us-west-1.amazonaws.com/forkfullrestimg/acq2.png')
+ p3 = open('https://app-forkfull-seeds.s3-us-west-1.amazonaws.com/forkfullrestimg/acq3.png')
+ p4 = open('https://app-forkfull-seeds.s3-us-west-1.amazonaws.com/forkfullrestimg/acq4.png')
 
  rest1.photos.attach(io: p1, filename: 'acq1.png')
  rest1.photos.attach(io: p2, filename: 'acq2.png')
@@ -49,9 +49,9 @@ Restaurant.delete_all
   address: '3127 Fillmore St, San Francisco, CA 94123',
  )
 
- p5 = URI.open('https://app-forkfull-seeds.s3-us-west-1.amazonaws.com/forkfullrestimg/atelier1.png')
- p6 = URI.open('https://app-forkfull-seeds.s3-us-west-1.amazonaws.com/forkfullrestimg/aterlier2.png')
- p7 = URI.open('https://app-forkfull-seeds.s3-us-west-1.amazonaws.com/forkfullrestimg/atelier3.png')
+ p5 = open('https://app-forkfull-seeds.s3-us-west-1.amazonaws.com/forkfullrestimg/atelier1.png')
+ p6 = open('https://app-forkfull-seeds.s3-us-west-1.amazonaws.com/forkfullrestimg/aterlier2.png')
+ p7 = open('https://app-forkfull-seeds.s3-us-west-1.amazonaws.com/forkfullrestimg/atelier3.png')
 
  rest2.photos.attach(io: p5, filename: 'atelier1.png')
  rest2.photos.attach(io: p6, filename: 'aterlier2.png')
@@ -68,8 +68,8 @@ Restaurant.delete_all
   address: '22 Hawthorne Street San Francisco CA 94105'
  )
 
-#  p8 = URI.open('https://app-forkfull-seeds.s3-us-west-1.amazonaws.com/forkfullrestimg/benu1.png')
-#  p9 = URI.open('https://app-forkfull-seeds.s3-us-west-1.amazonaws.com/forkfullrestimg/benu2.png')
+#  p8 = open('https://app-forkfull-seeds.s3-us-west-1.amazonaws.com/forkfullrestimg/benu1.png')
+#  p9 = open('https://app-forkfull-seeds.s3-us-west-1.amazonaws.com/forkfullrestimg/benu2.png')
 
  rest4 = Restaurant.create!(
   name: 'Cala', 

@@ -1369,13 +1369,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchRestaurant", function() { return fetchRestaurant; });
 var fetchRestaurants = function fetchRestaurants() {
   return $.ajax({
-    url: '/api/kitchens',
+    url: '/api/restaurants',
     method: "GET"
   });
 };
-var fetchRestaurant = function fetchRestaurant(id) {
+var fetchRestaurant = function fetchRestaurant(restaurId) {
   return $.ajax({
-    url: "/api/kitchens/".concat(id),
+    url: "/api/restaurants/".concat(restaurId),
     method: "GET"
   });
 };
