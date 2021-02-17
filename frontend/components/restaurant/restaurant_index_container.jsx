@@ -1,6 +1,5 @@
 import {connect} from 'react-redux'
-
-
+import { fetchRestaurant, fetchRestaurants } from "../../actions/restaurant_actions.js"
 
 const mSTP = (state, ownProps) => {
     return {
