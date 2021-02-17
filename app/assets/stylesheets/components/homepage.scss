@@ -6,16 +6,15 @@
 }
 
 #forkbg {
-   clip-path: inset(21% 0 29% 0);
+    clip-path: inset(27% 0 29% 0);
     width: 100%;
+    bottom: 58px;
 }
 
 .background {
     position: relative;
     display: flex;
-    object-fit: cover;
-    width: 100%;
-    bottom: 50px;
+    bottom: 302px;
     z-index: -1;
 }
 

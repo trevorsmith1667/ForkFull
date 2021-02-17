@@ -1,4 +1,5 @@
 import {connect} from 'react-redux'
+import RestaurantIndex from './restaurant_index.jsx'
 import { fetchRestaurant, fetchRestaurants } from "../../actions/restaurant_actions.js"
 
 
