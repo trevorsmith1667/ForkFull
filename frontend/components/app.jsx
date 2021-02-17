@@ -19,7 +19,8 @@ const App = () => (
         <Switch>
             {/* <ProtectedRoute exact path="/api/user" component={LogInFormContainer} /> */}
         <Route exact path="/" component={Homepage}/>
-      < Route path='/restaurants/:restaurId' component={RestaurantShow} />
+        < Route path='/restaurants/:restaurId' component={RestaurantShow} />
+       
             {/* <ProtectedRoute exact path="/api/session" /> */}
         <Route  component={NotFound} />
         </Switch>

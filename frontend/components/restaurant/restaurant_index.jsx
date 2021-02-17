@@ -10,18 +10,18 @@ class RestaurantIndex extends React.Component {
         this.props.fetchRestaurants();
     }
 
-    randomizeRest() {
-        const restRandom = this.props.restaurants.slice(0);
+    randomizeRest(arr) {
+       // const restRandom = this.props.restaurants.slice(0);
         for (let i = array.length - 1; i > 0; i--) {
             const j = Math.floor(Math.random() * (i + 1));
-            [restRandom[i], restRandom[j]] = [restRandom[j], restRandom[i]];
+            [arr[i], arr[j]] = [arr[j], arr[i]];
         }
-        return restRandom.slice(0, 14);
+        return arr.slice(0, 14);
     }
 
     render(){
-
-    
+        let restArr = randomizeRest(this.props.restaurants.slice(0))
+        restArr.slice(0, 14)
         
     }
 }

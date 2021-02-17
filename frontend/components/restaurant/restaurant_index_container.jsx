@@ -11,7 +11,7 @@ const mSTP = (state, ownProps) => {
 
 const mDTP = dispatch => ({
     fetchRestaurants: () => dispatch(fetchRestaurants()),
-    fetchRestaurant: (id) => dispatch(fetchRestaurant(id))
+    fetchRestaurant: (restaurId) => dispatch(fetchRestaurant(restaurId))
 });
 
 export default connect(mSTP, mDTP)(RestaurantIndex);

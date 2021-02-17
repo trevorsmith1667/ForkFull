@@ -10,19 +10,14 @@ class RestaurantIndexItem extends React.Component {
     }
 
     render() {
-        <div className='rest-info'>
-            <h2>{restaurant.name}</h2>
-            <ul className='info=list'>
-                <li>{restaurant.about}</li>
-                <li>{restaurant.cusine}</li>
-                <li>{restaurant.price}</li>
-                <li>{restaurant.city}</li>
-                <li>{restaurant.state}</li>
-            </ul>
-        </div>
+        const restArr = this.props.restaurants;
+        return (
+            <div>
+                 {restArr.map(restaurant => (
+                    restaurant.name))}
+            </div>
+        )
     }
- 
-
 }
 
 export default RestaurantIndexItem;
