@@ -2,12 +2,12 @@ class Api::RestaurantsController < ApplicationController
 
     def index
         @restaurants = Restaurant.all
-        render: index
+        render :index
     end 
 
     def show 
         @restaurant = Restaurant.with_attached_photos.find(params[:id])
-        render: show
+        render :show
     end 
 
     private
