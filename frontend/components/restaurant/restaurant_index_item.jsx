@@ -11,7 +11,7 @@ class RestaurantIndexItem extends React.Component {
         const {restaurant} = this.props
         return (
             <div className="restaurant-index-item">
-                {/* <Link to={`/restaurants/${restaurant.id}`} key={restaurant.id}> */}
+                <Link to={`/restaurants/${restaurant.id}`} key={restaurant.id}>
                     <div className='rest-unit'>
                         <div className='photo'>
                             <img src={restaurant.photoURL} className="unit-photo" />
@@ -23,7 +23,7 @@ class RestaurantIndexItem extends React.Component {
                             </div>
                         </div>
                     </div>
-                {/* </Link> */}
+                </Link>
             </div>
         )
     }
