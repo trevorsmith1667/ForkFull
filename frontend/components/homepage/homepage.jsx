@@ -7,6 +7,7 @@ const Homepage = () => {
             <div className="background">
                 <img id="forkbg" src={window.backgroundURL} />
             </div>
+            <h2 className="booking-header">Book Today</h2>
             <div><RestaurantIndex /></div>
             
         </div>
