@@ -35,12 +35,19 @@
     display: flex;
     position: relative;
     bottom: 411px;
-    margin: auto;
     border-radius: 2px;
+    /* margin-top: -27px; */
+}
+
+.rest-unit{
+    display: flex;
+    box-shadow: 3px 3px 3px rgb(199, 198, 198);
+    cursor: pointer;
+
 }
 
 .rest-unit:hover {
-    box-shadow: 3px 3px 5px rgb(199, 198, 198);
+    box-shadow: 3px 3px 3px rgb(199, 198, 198);
     cursor: pointer;
     //padding:3px;
 }
