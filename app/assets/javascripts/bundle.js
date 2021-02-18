@@ -135,7 +135,6 @@ __webpack_require__.r(__webpack_exports__);
 var RECEIVE_RESTAURANT = 'RECEIVE_RESTAURANT';
 var RECEIVE_RESTAURANTS = 'RECEIVE_RESTAURANTS';
 var receiveRestaurant = function receiveRestaurant(restaurant) {
-  debugger;
   return {
     type: RECEIVE_RESTAURANT,
     restaurant: restaurant
@@ -802,7 +801,7 @@ var RestaurantInfo = function RestaurantInfo(_ref) {
     className: "restaurant-info"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", null, restaurant.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "info-list"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, restaurant.price), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, restaurant.cuisine)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, restaurant.price), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, restaurant.cuisine), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, restaurant.phone_number), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, restaurant.address), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, restaurant.city), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", null, restaurant.state)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "about"
   }, restaurant.about));
 };
@@ -899,6 +898,7 @@ var RestaurantShow = /*#__PURE__*/function (_React$Component) {
   _createClass(RestaurantShow, [{
     key: "componentDidMount",
     value: function componentDidMount() {
+      debugger;
       this.props.fetchRestaurant(this.props.match.params.id);
     }
   }, {
@@ -908,9 +908,9 @@ var RestaurantShow = /*#__PURE__*/function (_React$Component) {
         return null;
       }
 
+      var photoUrls = this.props.restaurant.photoUrls;
       var restaurant = this.props.restaurant;
       if (!restaurant) return null;
-      var photoUs = this.props.restaurant.photoUrls;
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "rest-show"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -920,7 +920,7 @@ var RestaurantShow = /*#__PURE__*/function (_React$Component) {
       })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "show-photos"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_restaurant_photos__WEBPACK_IMPORTED_MODULE_1__["default"], {
-        allPhotos: this.props.restaurant.photoUrls
+        allPhotos: photoUrls
       })));
     }
   }]);
@@ -952,9 +952,8 @@ __webpack_require__.r(__webpack_exports__);
 
 var mSTP = function mSTP(state, ownProps) {
   return {
-    restaurant: state.entities.restaurants[ownProps.match.params.id],
-    //restaurantId: ownProps.match.params.id,
-    currentUser: state.entities.users[state.session.id]
+    restaurant: state.entities.restaurants[ownProps.match.params.id] //restaurantId: ownProps.match.params.id,
+
   };
 };
 
@@ -1465,7 +1464,6 @@ var restaurantReducer = function restaurantReducer() {
       return action.restaurants;
 
     case _actions_restaurant_actions__WEBPACK_IMPORTED_MODULE_0__["RECEIVE_RESTAURANT"]:
-      debugger;
       return Object.assign({}, state, _defineProperty({}, action.restaurant.id, action.restaurant));
 
     default:

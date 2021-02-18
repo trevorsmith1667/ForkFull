@@ -6,7 +6,6 @@ import {withRouter} from 'react-router-dom'
 const mSTP = (state, ownProps) => ({
     restaurant: state.entities.restaurants[ownProps.match.params.id],
     //restaurantId: ownProps.match.params.id,
-    currentUser: state.entities.users[state.session.id]
 })
 
 const mDTP = dispatch => {

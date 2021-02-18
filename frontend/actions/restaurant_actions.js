@@ -4,7 +4,6 @@ export const RECEIVE_RESTAURANT = 'RECEIVE_RESTAURANT';
 export const RECEIVE_RESTAURANTS = 'RECEIVE_RESTAURANTS';
 
 export const receiveRestaurant = (restaurant) => {
-    debugger
     return {
         type: RECEIVE_RESTAURANT,
         restaurant

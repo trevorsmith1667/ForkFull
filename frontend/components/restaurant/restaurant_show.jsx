@@ -9,14 +9,15 @@ class RestaurantShow extends React.Component {
 
 
     componentDidMount(){
+        debugger
         this.props.fetchRestaurant(this.props.match.params.id)
     }
 
     render(){
         if (!this.props.restaurant.photoUrls){return null}
+        const photoUrls = this.props.restaurant.photoUrls
         const restaurant = this.props.restaurant
         if (!restaurant) return null;
-       const photoUs = this.props.restaurant.photoUrls
         return (
             <div className="rest-show">
                 {/* <img src={photoUs[0]} className="show-header"/> */}
@@ -24,7 +25,7 @@ class RestaurantShow extends React.Component {
                     <RestaurantInfo restaurant={restaurant}/>
                 </div>
                 <div className="show-photos">
-                    <RestaurantPhotos allPhotos={this.props.restaurant.photoUrls} />
+                    <RestaurantPhotos allPhotos={photoUrls} />
                 </div> 
 
            </div>
