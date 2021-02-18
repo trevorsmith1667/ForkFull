@@ -15,7 +15,6 @@ class RestaurantShow extends React.Component {
     render(){
         const restaurant = this.props.restaurant
         if (!restaurant) return null;
-    else {
        const photoUs = this.props.restaurant.photoUrls
         return (
             <div className="rest-show">
@@ -30,7 +29,6 @@ class RestaurantShow extends React.Component {
            </div>
 
         )
-        }
     }
 }
 

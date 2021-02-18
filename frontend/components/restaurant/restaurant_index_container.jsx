@@ -1,7 +1,7 @@
 import {connect} from 'react-redux'
 import RestaurantIndex from './restaurant_index.jsx'
 import { fetchRestaurant, fetchRestaurants } from "../../actions/restaurant_actions.js"
-
+import {withRouter} from 'react-router-dom'
 
 const mSTP = (state, ownProps) => {
     return {
@@ -15,4 +15,4 @@ const mDTP = dispatch => ({
     fetchRestaurant: (restaurId) => dispatch(fetchRestaurant(restaurId))
 });
 
-export default connect(mSTP, mDTP)(RestaurantIndex);
+export default withRouter(connect(mSTP, mDTP)(RestaurantIndex));

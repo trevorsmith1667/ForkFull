@@ -7,7 +7,7 @@ import LogInFormContainer from './session_form/login_form_container';
 import { Route, Switch, Link} from 'react-router-dom';
 import {ProtectedRoute} from '../util/route_util'
 import { AuthRoute } from '../util/route_util';
-import RestaurantShow from './restaurant/restaurant_show_container'
+import RestaurantShow from '../components/restaurant/restaurant_show_container'
 import Modal from './modal/modal'
 import Nav from '../components/nav/nav'
 import NotFound from './not_found.jsx'
@@ -20,7 +20,7 @@ const App = () => (
         <Switch>
             {/* <ProtectedRoute exact path="/api/user" component={LogInFormContainer} /> */}
         <Route exact path="/" component={Homepage}/>
-        < Route path='/restaurants/:restaurId' component={RestaurantShow} />
+        <Route path="/restaurants/:id" component={RestaurantShow} />
             {/* <ProtectedRoute exact path="/api/session" /> */}
         <Route  component={NotFound} />
         </Switch>

@@ -31,7 +31,9 @@ class RestaurantIndex extends React.Component {
 
         <div className="rest-index">
             {rests.map(restaurant => (
+                // <Link to={`/restaurants/${restaurant.id}`}>
                 <RestaurantIndexItem key={restaurant.id} restaurant={restaurant}/>
+                // </Link>
             ))}
         </div>
 
