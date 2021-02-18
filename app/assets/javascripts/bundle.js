@@ -825,10 +825,7 @@ var RestaurantShow = /*#__PURE__*/function (_React$Component) {
       var rest = this.props.restaurant;
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "rest-show"
-      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
-        src: "{rest.photoUrls[0]}",
-        alt: "show-image"
-      }));
+      });
     }
   }]);
 
