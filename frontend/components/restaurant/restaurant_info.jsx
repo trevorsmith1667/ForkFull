@@ -11,7 +11,7 @@ const RestaurantInfo = ({restaurant}) => {
                 <li>{restaurant.cuisine}</li>
             </ul>
             <div className="about">
-                {resturaunt.about}
+                {restaurant.about}
             </div>
         </div>
     )

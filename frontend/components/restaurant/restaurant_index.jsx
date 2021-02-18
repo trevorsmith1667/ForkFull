@@ -22,6 +22,7 @@ class RestaurantIndex extends React.Component {
     // }
 
     render(){
+        if (this.props.restaurants.length === 0) {return null};
         // let restArr = randomizeRest(this.props.restaurants.slice(0))
         // restArr.slice(0, 14)
         const rests = this.props.restaurants
