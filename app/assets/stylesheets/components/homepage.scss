@@ -1,8 +1,6 @@
 .homepage {
-    position: relative;
+    position: absolute;
     justify-content: center;
-    display: flex;
-    z-index: 3;
 }
 
 #forkbg {
@@ -15,7 +13,7 @@
     position: relative;
     display: flex;
     bottom: 302px;
-    z-index: -1;
+    z-index: -100;
 }
 
 .fourohfour {

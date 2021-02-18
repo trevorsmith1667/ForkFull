@@ -1,26 +1,30 @@
 import React from 'react';
+import {Link} from  'react-router-dom'
 
 class RestaurantIndexItem extends React.Component {
     constructor(props) {
         super(props);
     }
 
-    componentDidMount() {
-        this.props.fetchRestaurants();
-    }
 
     render() {
+        const {restaurant} = this.props
         return (
-            <Link to={`/restaurants/${restaurant.id}`} key={restaurant.id}>
-                <div className='rest-unit'>
-                    <img src={restaurant.photos[0]} className="unit-photo" />
-                    <div className='unit-info'>
-                        <h2>{restaurant.name}</h2>
-                        <p>{restaurant.city}</p>
-                        <p>{restaurant.price}</p>
+            <div className="restaurant-index-item">
+                {/* <Link to={`/restaurants/${restaurant.id}`} key={restaurant.id}> */}
+                    <div className='rest-unit'>
+                        <div className='photo'>
+                            <img src={restaurant.photoURL} className="unit-photo" />
+                            <div className='unit-info'>
+                                <div className="name">{restaurant.name}</div>
+                                <div className="city">{restaurant.city}</div>
+                                <div className="price">{restaurant.price}</div>
+                                <div className="cuisine">{restaurant.cuisine}</div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </Link>
+                {/* </Link> */}
+            </div>
         )
     }
 }

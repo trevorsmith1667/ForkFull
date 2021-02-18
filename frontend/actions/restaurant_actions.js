@@ -7,7 +7,6 @@ export const receiveRestaurant = ({ restaurant, reviews }) => {
     return {
         type: RECEIVE_RESTAURANT,
         restaurant
-       
     }
 }
 

@@ -1,0 +1,48 @@
+
+
+.unit-photo {
+    width: 231px;
+    height: 231px;
+    clip-path: inset(22% 4% 11% -3%);
+    object-fit: contain;
+    overflow: hidden;
+    max-height: 200px;
+    display: table-cell;
+}
+
+
+.unit-info {
+    font-family: 'Source Sans Pro';
+    display: inline;
+
+}
+
+.rest-index{
+    display: flex;
+    width: 1000px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.name {
+    font-weight: 600;
+    font-size: 19px;
+
+}
+
+.restaurant-index-item {
+    display: flex;
+    position: relative;
+    bottom: 411px;
+    margin: auto;
+    border-radius: 2px;
+}
+
+.rest-unit:hover {
+    box-shadow: 3px 3px 5px rgb(199, 198, 198);
+    cursor: pointer;
+    //padding:3px;
+}
+
+

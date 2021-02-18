@@ -1,5 +1,6 @@
 
 import React from 'react';
+import RestaurantIndexContainer from '../components/restaurant/restaurant_index_container'
 import GreetingContainer from "./greeting/greeting_container";
 import SignUpFormContainer from './session_form/signup_form_container';
 import LogInFormContainer from './session_form/login_form_container';
@@ -19,8 +20,7 @@ const App = () => (
         <Switch>
             {/* <ProtectedRoute exact path="/api/user" component={LogInFormContainer} /> */}
         <Route exact path="/" component={Homepage}/>
-        < Route path='/restaurants/:restaurId' component={RestaurantShow} />
-       
+     {/* < Route path='/restaurants/:restaurId' component={RestaurantShow} /> */}
             {/* <ProtectedRoute exact path="/api/session" /> */}
         <Route  component={NotFound} />
         </Switch>
