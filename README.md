@@ -17,6 +17,7 @@ Utilizing a combination of React and Redux, with Ruby on Rails backend framework
 * PostgresSQL -database
 * Node.js -runtime environment
 * Webpack -module bundler
+* SCSS -user interface styling
 
 ## `Features`
 
@@ -29,7 +30,8 @@ Utilizing a combination of React and Redux, with Ruby on Rails backend framework
 # Restaurant Index 
 
 * Users can see a display of all restaurants that are clickable links to individual show pages.
-* Restaurants display with key pertinent information 
+* Restaurants display with key pertinent information.
+* Packaging the individual restaurants into smaller components helped structure and compress code into bite sized pieces while overcoming the challenge of modifying nested components.
 
 ```javascript
 class RestaurantIndexItem extends React.Component {
@@ -60,6 +62,43 @@ render() {
 }
 }
 ```
+
+# Restaurant Show
+
+* Restaurants render as a sleek compartmentalized show page.
+* In order to faciliate easy manipulation of SCSS and compact code, breaking down inherited image urls and restaurant information components allowed for more maneagable code structure and readable notation. 
+
+```javascript
+const RestaurantPhotos = ({allPhotos}) => {
+    
+   const photoDisplay = allPhotos.map((photoUrl) => {
+       return  <li><img src={photoUrl} className="profile-images-show"/></li>
+      
+   )
+
+    return (
+        <div className='profile-photos'>
+            <ul className='all-photos'>
+                {photoDisplay}
+            </ul>
+        </div>
+    )
+    
+     
+}
+
+export default RestaurantPhotos;
+
+```
+# Future Features
+
+* Image Carousel 
+* Restaurant reviews
+* Restaurant reservations
+* Earned points
+* Restaurant search
+* Google maps api inclusion
+* Restaurant ratings
 
 
 
