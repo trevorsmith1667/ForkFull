@@ -3,12 +3,11 @@
 }
 
 .show-header{
-    clip-path: inset(27% 0 29% 0);
+   height: 300px;
     width: 100%;
-    bottom: 58px;
+    object-fit: cover;
     position: relative;
-    display: flex;
-    bottom: 246px;
+    bottom: 38px;
 }
 
 .show-name{
@@ -18,16 +17,8 @@
 }
 
 .show-page-info{
-   display: flex;
-    justify-content: center;
     max-width: 450px;
-    position: relative;
-    bottom: 355px;
     font-family: 'Source Sans Pro';
-}
-
-.restaurant-info {
-    align-content: center;
 }
 
 .show-content{
@@ -36,8 +27,9 @@
     position: relative;
 }
 
-.all-photos{
+.profile-image-tags{
     width: 400px;
     height: 400px;
     object-fit: cover;
+    display: block;
 }

@@ -66,3 +66,18 @@
 }
 
 
+.profile-image-tags{
+    height: 300px;
+    display: inline-block;
+    clip-path: inset(22% 4% 11% 3%);
+}
+
+.all-photos{
+    display: flex;
+    justify-content: center;
+    border: black 2px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+}
+

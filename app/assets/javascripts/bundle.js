@@ -800,17 +800,17 @@ var RestaurantInfo = function RestaurantInfo(_ref) {
   var restaurant = _ref.restaurant;
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "restaurant-info"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     className: "show-name"
-  }, restaurant.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
-    className: "info-list"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, restaurant.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
     className: "line-items"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "res-price"
-  }, restaurant.price), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }, restaurant.price), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
     className: "res-cuisine"
-  }, restaurant.cuisine)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+  }, restaurant.cuisine)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    className: "info-list"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "res-number"
   }, restaurant.phone_number), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "res-address"
@@ -842,7 +842,6 @@ __webpack_require__.r(__webpack_exports__);
 
 var RestaurantPhotos = function RestaurantPhotos(_ref) {
   var allPhotos = _ref.allPhotos;
-  // console.log(allPhotos)
   var photoDisplay = allPhotos.map(function (photoUrl, idx) {
     return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
       key: idx
