@@ -16,10 +16,13 @@ const Greeting = ({ currentUser, logout, openModal }) => {
     const personalGreeting = () => (
         <div className="user-dropdown">
             <div className="user-icon"><FaRegUserCircle size="28px"/>
-                <ul className="dropdown-list arrow-top">
-                    <li className="dropdown-greeting">Hello, {currentUser.username}!</li>
-                    <li className="dropdown-signout" onClick={logout} >Sign out</li> 
-                </ul>
+                <div className='dropdown-contents'>
+                    <div className="dropdown-list arrow-top">
+                        <div className="dropdown-greeting">Hi, {currentUser.username}!</div>
+                        <div className="dropdown-signout" onClick={logout} >Sign out</div>
+                    </div>
+                </div>
+        
             </div>
         </div>
     );
