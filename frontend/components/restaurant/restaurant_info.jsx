@@ -5,14 +5,16 @@ const RestaurantInfo = ({restaurant}) => {
 
     return (
         <div className="restaurant-info">
-            <p>{restaurant.name}</p>
+            <p className='show-name'>{restaurant.name}</p>
             <ul className="info-list">
-                <li>{restaurant.price}</li>
-                <li>{restaurant.cuisine}</li>
-                <li>{restaurant.phone_number}</li>
-                <li>{restaurant.address}</li>
-                <li>{restaurant.city}</li>
-                <li>{restaurant.state}</li>
+                <div className='line-items'>
+                    <li className="res-price">{restaurant.price}</li>
+                    <li className="res-cuisine">{restaurant.cuisine}</li>
+                </div>
+                <li className='res-number'>{restaurant.phone_number}</li>
+                <li className='res-address'>{restaurant.address}</li>
+                <li className='city'>{restaurant.city}</li>
+                <li className='state'>{restaurant.state}</li>
             </ul>
             <div className="about">
                 {restaurant.about}

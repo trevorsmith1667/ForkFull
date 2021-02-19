@@ -1,12 +1,12 @@
 import React from 'react'
 
 const RestaurantPhotos = ({allPhotos}) => {
+   // console.log(allPhotos)
     
    const photoDisplay = allPhotos.map((photoUrl, idx) => {
-    <li key={idx}> <img src={photoUrl} className="profile-image-tags"/></li>
+     return  <li key={idx}> <img src={photoUrl} className="profile-image-tags"/></li>
     }
    )
-
 
     return (
         <div className='profile-photos'>
@@ -15,6 +15,7 @@ const RestaurantPhotos = ({allPhotos}) => {
             </ul>
         </div>
     )
+    
      
 }
 

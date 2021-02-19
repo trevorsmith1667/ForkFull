@@ -14,6 +14,7 @@
 .unit-info {
     font-family: 'Source Sans Pro';
     display: inline;
+    color: black;
 
 }
 
@@ -48,7 +49,7 @@
 }
 
 .rest-unit:hover {
-    box-shadow: 3px 3px 3px rgb(199, 198, 198);
+    box-shadow: 3px 3px 3px rgb(184, 182, 182);
     cursor: pointer;
     //padding:3px;
 }
