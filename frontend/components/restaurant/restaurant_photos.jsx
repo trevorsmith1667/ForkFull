@@ -2,9 +2,9 @@ import React from 'react'
 
 const RestaurantPhotos = ({allPhotos}) => {
     
-   const photoDisplay = allPhotos.map((photoUrl) => {
-       return  <li><img src={photoUrl} className="profile-images-show"/></li>
-      
+   const photoDisplay = allPhotos.map((photoUrl, index) => {
+       return  <li key={index}> <img src={photoUrl} className="profile-images-show"/></li>
+}
    )
 
     return (

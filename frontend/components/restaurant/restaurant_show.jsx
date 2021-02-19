@@ -24,7 +24,7 @@ class RestaurantShow extends React.Component {
                     <RestaurantInfo restaurant={restaurant}/>
                     </div>
                 </div>
-                 <div className="photo-count">Photos</div>
+                 {/* <div className="photo-count">Photos</div> */}
                 <div className="show-photos">
                     <RestaurantPhotos allPhotos={this.props.restaurant.photoUrls.slice(1)} />
                 </div> 

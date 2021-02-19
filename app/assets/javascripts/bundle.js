@@ -804,11 +804,11 @@ var RestaurantInfo = function RestaurantInfo(_ref) {
     className: "restaurant-info"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
     className: "show-name"
-  }, restaurant.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+  }, restaurant.name), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "line-items"
-  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "res-price"
-  }, restaurant.price), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+  }, restaurant.price), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
     className: "res-cuisine"
   }, restaurant.cuisine)), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
     className: "info-list"
@@ -834,9 +834,32 @@ var RestaurantInfo = function RestaurantInfo(_ref) {
   !*** ./frontend/components/restaurant/restaurant_photos.jsx ***!
   \**************************************************************/
 /*! exports provided: default */
-/***/ (function(module, exports) {
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nSyntaxError: /Users/trevor/Desktop/ForkFull/frontend/components/restaurant/restaurant_photos.jsx: Unexpected token (8:3)\n\n\u001b[0m \u001b[90m  6 |\u001b[39m        \u001b[36mreturn\u001b[39m  \u001b[33m<\u001b[39m\u001b[33mli\u001b[39m\u001b[33m>\u001b[39m\u001b[33m<\u001b[39m\u001b[33mimg\u001b[39m src\u001b[33m=\u001b[39m{photoUrl} className\u001b[33m=\u001b[39m\u001b[32m\"profile-images-show\"\u001b[39m\u001b[33m/\u001b[39m\u001b[33m>\u001b[39m\u001b[33m<\u001b[39m\u001b[33m/\u001b[39m\u001b[33mli\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m  7 |\u001b[39m       \u001b[0m\n\u001b[0m\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  8 |\u001b[39m    )\u001b[0m\n\u001b[0m \u001b[90m    |\u001b[39m    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m  9 |\u001b[39m\u001b[0m\n\u001b[0m \u001b[90m 10 |\u001b[39m     \u001b[36mreturn\u001b[39m (\u001b[0m\n\u001b[0m \u001b[90m 11 |\u001b[39m         \u001b[33m<\u001b[39m\u001b[33mdiv\u001b[39m className\u001b[33m=\u001b[39m\u001b[32m'profile-photos'\u001b[39m\u001b[33m>\u001b[39m\u001b[0m\n    at Object._raise (/Users/trevor/Desktop/ForkFull/node_modules/@babel/parser/lib/index.js:776:17)\n    at Object.raiseWithData (/Users/trevor/Desktop/ForkFull/node_modules/@babel/parser/lib/index.js:769:17)\n    at Object.raise (/Users/trevor/Desktop/ForkFull/node_modules/@babel/parser/lib/index.js:737:17)\n    at Object.unexpected (/Users/trevor/Desktop/ForkFull/node_modules/@babel/parser/lib/index.js:9183:16)\n    at Object.parseExprAtom (/Users/trevor/Desktop/ForkFull/node_modules/@babel/parser/lib/index.js:10673:20)\n    at Object.parseExprAtom (/Users/trevor/Desktop/ForkFull/node_modules/@babel/parser/lib/index.js:4795:20)\n    at Object.parseExprSubscripts (/Users/trevor/Desktop/ForkFull/node_modules/@babel/parser/lib/index.js:10248:23)\n    at Object.parseUpdate (/Users/trevor/Desktop/ForkFull/node_modules/@babel/parser/lib/index.js:10228:21)\n    at Object.parseMaybeUnary (/Users/trevor/Desktop/ForkFull/node_modules/@babel/parser/lib/index.js:10206:23)\n    at Object.parseExprOps (/Users/trevor/Desktop/ForkFull/node_modules/@babel/parser/lib/index.js:10071:23)\n    at Object.parseMaybeConditional (/Users/trevor/Desktop/ForkFull/node_modules/@babel/parser/lib/index.js:10045:23)\n    at Object.parseMaybeAssign (/Users/trevor/Desktop/ForkFull/node_modules/@babel/parser/lib/index.js:10008:21)\n    at Object.parseExpressionBase (/Users/trevor/Desktop/ForkFull/node_modules/@babel/parser/lib/index.js:9953:23)\n    at allowInAnd (/Users/trevor/Desktop/ForkFull/node_modules/@babel/parser/lib/index.js:9947:39)\n    at Object.allowInAnd (/Users/trevor/Desktop/ForkFull/node_modules/@babel/parser/lib/index.js:11647:12)\n    at Object.parseExpression (/Users/trevor/Desktop/ForkFull/node_modules/@babel/parser/lib/index.js:9947:17)\n    at Object.parseStatementContent (/Users/trevor/Desktop/ForkFull/node_modules/@babel/parser/lib/index.js:11907:23)\n    at Object.parseStatement (/Users/trevor/Desktop/ForkFull/node_modules/@babel/parser/lib/index.js:11776:17)\n    at Object.parseBlockOrModuleBlockBody (/Users/trevor/Desktop/ForkFull/node_modules/@babel/parser/lib/index.js:12358:25)\n    at Object.parseBlockBody (/Users/trevor/Desktop/ForkFull/node_modules/@babel/parser/lib/index.js:12349:10)\n    at Object.parseBlock (/Users/trevor/Desktop/ForkFull/node_modules/@babel/parser/lib/index.js:12333:10)\n    at Object.parseFunctionBody (/Users/trevor/Desktop/ForkFull/node_modules/@babel/parser/lib/index.js:11319:24)\n    at Object.parseArrowExpression (/Users/trevor/Desktop/ForkFull/node_modules/@babel/parser/lib/index.js:11291:10)\n    at Object.parseParenAndDistinguishExpression (/Users/trevor/Desktop/ForkFull/node_modules/@babel/parser/lib/index.js:10864:12)\n    at Object.parseExprAtom (/Users/trevor/Desktop/ForkFull/node_modules/@babel/parser/lib/index.js:10568:21)\n    at Object.parseExprAtom (/Users/trevor/Desktop/ForkFull/node_modules/@babel/parser/lib/index.js:4795:20)\n    at Object.parseExprSubscripts (/Users/trevor/Desktop/ForkFull/node_modules/@babel/parser/lib/index.js:10248:23)\n    at Object.parseUpdate (/Users/trevor/Desktop/ForkFull/node_modules/@babel/parser/lib/index.js:10228:21)\n    at Object.parseMaybeUnary (/Users/trevor/Desktop/ForkFull/node_modules/@babel/parser/lib/index.js:10206:23)\n    at Object.parseExprOps (/Users/trevor/Desktop/ForkFull/node_modules/@babel/parser/lib/index.js:10071:23)");
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/react.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+
+
+var RestaurantPhotos = function RestaurantPhotos(_ref) {
+  var allPhotos = _ref.allPhotos;
+  var photoDisplay = allPhotos.map(function (photoUrl, index) {
+    return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+      key: index
+    }, " ", /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      src: photoUrl,
+      className: "profile-images-show"
+    }));
+  });
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "profile-photos"
+  }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    className: "all-photos"
+  }, photoDisplay));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (RestaurantPhotos);
 
 /***/ }),
 
@@ -922,8 +945,6 @@ var RestaurantShow = /*#__PURE__*/function (_React$Component) {
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_restaurant_info__WEBPACK_IMPORTED_MODULE_2__["default"], {
         restaurant: restaurant
       }))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
-        className: "photo-count"
-      }, "Photos"), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "show-photos"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_restaurant_photos__WEBPACK_IMPORTED_MODULE_1__["default"], {
         allPhotos: this.props.restaurant.photoUrls.slice(1)
@@ -1645,8 +1666,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/index.js");
 /* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! redux-thunk */ "./node_modules/redux-thunk/es/index.js");
 /* harmony import */ var _reducers_root_reducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../reducers/root_reducer */ "./frontend/reducers/root_reducer.js");
-/* harmony import */ var redux_logger__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! redux-logger */ "./node_modules/redux-logger/dist/redux-logger.js");
-/* harmony import */ var redux_logger__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(redux_logger__WEBPACK_IMPORTED_MODULE_4__);
+/* harmony import */ var redux_logger__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! redux-logger */ "./node_modules/redux-logger/dist/redux-logger.js");
+/* harmony import */ var redux_logger__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(redux_logger__WEBPACK_IMPORTED_MODULE_3__);
 
 
 
@@ -1654,7 +1675,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var configureStore = function configureStore() {
   var preloadedState = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
-  return Object(redux__WEBPACK_IMPORTED_MODULE_0__["createStore"])(_reducers_root_reducer__WEBPACK_IMPORTED_MODULE_2__["default"], preloadedState, Object(redux__WEBPACK_IMPORTED_MODULE_0__["applyMiddleware"])(redux_thunk__WEBPACK_IMPORTED_MODULE_1__["default"], redux_logger__WEBPACK_IMPORTED_MODULE_4___default.a));
+  return Object(redux__WEBPACK_IMPORTED_MODULE_0__["createStore"])(_reducers_root_reducer__WEBPACK_IMPORTED_MODULE_2__["default"], preloadedState, Object(redux__WEBPACK_IMPORTED_MODULE_0__["applyMiddleware"])(redux_thunk__WEBPACK_IMPORTED_MODULE_1__["default"], redux_logger__WEBPACK_IMPORTED_MODULE_3___default.a));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (configureStore);

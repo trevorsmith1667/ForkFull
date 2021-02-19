@@ -6,10 +6,10 @@ const RestaurantInfo = ({restaurant}) => {
     return (
         <div className="restaurant-info">
             <h2 className='show-name'>{restaurant.name}</h2>
-                <div className='line-items'>
-                    <p className="res-price">{restaurant.price}</p>
-                    <p className="res-cuisine">{restaurant.cuisine}</p>
-                </div>
+                <ul className='line-items'>
+                    <li className="res-price">{restaurant.price}</li>
+                    <li className="res-cuisine">{restaurant.cuisine}</li>
+                </ul>
             <ul className="info-list">
                 <li className='res-number'>{restaurant.phone_number}</li>
                 <li className='res-address'>{restaurant.address}</li>
