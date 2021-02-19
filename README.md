@@ -14,7 +14,7 @@ Utilizing a combination of React and Redux, with Ruby on Rails backend framework
 * Ruby on Rails -backend framework
 * React.js -user interface components
 * Redux.js -frontend framework
-* PostgresSQL -database
+* PostgreSQL -database
 * Node.js -runtime environment
 * Webpack -module bundler
 * SCSS -user interface styling
