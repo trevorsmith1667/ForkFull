@@ -12,29 +12,17 @@ class RestaurantIndex extends React.Component {
         this.props.fetchRestaurants();
     }
 
-    // randomizeRest(arr) {
-    //    // const restRandom = this.props.restaurants.slice(0);
-    //     for (let i = array.length - 1; i > 0; i--) {
-    //         const j = Math.floor(Math.random() * (i + 1));
-    //         [arr[i], arr[j]] = [arr[j], arr[i]];
-    //     }
-    //     return arr.slice(0, 14);
-    // }
-
+   
     render(){
         if (this.props.restaurants.length === 0) {return null};
-        // let restArr = randomizeRest(this.props.restaurants.slice(0))
-        // restArr.slice(0, 14)
+       
         const rests = this.props.restaurants
-        // randomizeRest(rests)
-
+       
         return (
 
         <div className="rest-index">
             {rests.map(restaurant => (
-                // <Link to={`/restaurants/${restaurant.id}`}>
                 <RestaurantIndexItem key={restaurant.id} restaurant={restaurant}/>
-                // </Link>
             ))}
         </div>
 

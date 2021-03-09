@@ -617,15 +617,7 @@ var RestaurantIndex = /*#__PURE__*/function (_React$Component) {
     key: "componentDidMount",
     value: function componentDidMount() {
       this.props.fetchRestaurants();
-    } // randomizeRest(arr) {
-    //    // const restRandom = this.props.restaurants.slice(0);
-    //     for (let i = array.length - 1; i > 0; i--) {
-    //         const j = Math.floor(Math.random() * (i + 1));
-    //         [arr[i], arr[j]] = [arr[j], arr[i]];
-    //     }
-    //     return arr.slice(0, 14);
-    // }
-
+    }
   }, {
     key: "render",
     value: function render() {
@@ -633,23 +625,15 @@ var RestaurantIndex = /*#__PURE__*/function (_React$Component) {
         return null;
       }
 
-      ; // let restArr = randomizeRest(this.props.restaurants.slice(0))
-      // restArr.slice(0, 14)
-
-      var rests = this.props.restaurants; // randomizeRest(rests)
-
+      ;
+      var rests = this.props.restaurants;
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         className: "rest-index"
       }, rests.map(function (restaurant) {
-        return (
-          /*#__PURE__*/
-          // <Link to={`/restaurants/${restaurant.id}`}>
-          react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_restaurant_index_item__WEBPACK_IMPORTED_MODULE_2__["default"], {
-            key: restaurant.id,
-            restaurant: restaurant
-          }) // </Link>
-
-        );
+        return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_restaurant_index_item__WEBPACK_IMPORTED_MODULE_2__["default"], {
+          key: restaurant.id,
+          restaurant: restaurant
+        });
       }));
     }
   }]);
@@ -711,6 +695,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/react.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
+/* harmony import */ var _restaurant_photos__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./restaurant_photos */ "./frontend/components/restaurant/restaurant_photos.jsx");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -736,6 +721,7 @@ function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.g
 
 
 
+
 var RestaurantIndexItem = /*#__PURE__*/function (_React$Component) {
   _inherits(RestaurantIndexItem, _React$Component);
 
@@ -745,7 +731,21 @@ var RestaurantIndexItem = /*#__PURE__*/function (_React$Component) {
     _classCallCheck(this, RestaurantIndexItem);
 
     return _super.call(this, props);
-  }
+  } // restaurantScroll = (props) => {
+  //     const {children} = props
+  //     return (
+  //         <div className="images-container">
+  //             <div className="scroll-container">
+  //                 <div className="scroll-content-container">
+  //                     <div className="scroll-content">
+  //                         {}
+  //                     </div>
+  //                 </div>
+  //             </div>
+  //         </div>
+  //     )
+  // }
+
 
   _createClass(RestaurantIndexItem, [{
     key: "render",
