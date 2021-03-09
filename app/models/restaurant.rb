@@ -3,4 +3,8 @@ class Restaurant < ApplicationRecord
     
     has_many_attached :photos
 
+    has_many :reservations,
+    foreign_key: :restaurant_id,
+    class_name: :Reservation
+
 end
