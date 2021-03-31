@@ -1,27 +1,11 @@
 import React from 'react';
 import {Link} from  'react-router-dom'
-import RestaurantPhotos from './restaurant_photos'
+// import RestaurantPhotos from './restaurant_photos'
 
 class RestaurantIndexItem extends React.Component {
     constructor(props) {
         super(props);
     }
-
-// restaurantScroll = (props) => {
-//     const {children} = props
-//     return (
-//         <div className="images-container">
-//             <div className="scroll-container">
-//                 <div className="scroll-content-container">
-//                     <div className="scroll-content">
-//                         {}
-//                     </div>
-//                 </div>
-//             </div>
-//         </div>
-//     )
-// }
-
 
     render() {
         const restaurant = this.props.restaurant
