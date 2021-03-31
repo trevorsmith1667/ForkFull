@@ -15,6 +15,9 @@ class User < ApplicationRecord
     foreign_key: :reservation_id,
     class_name: :Reservation
 
+     has_many :reserved_restaurants,
+     through: :reservations,
+     source: :restaurant
 
     def self.find_by_credentials(email, password)
         user = User.find_by(email: email)
