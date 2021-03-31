@@ -1,3 +1,11 @@
+.search-cont {
+    display: flex;
+    flex-direction: column;
+    margin-top: 67px;
+    justify-content: center;
+    align-items: center;
+    margin-left: 169px;
+}
 .search-date {
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
@@ -87,12 +95,4 @@
   display: flex;
   align-items: center;
   
-}
-.search-cont{
-    display: flex;
-    flex-direction: column;
-    margin-top: 67px;
-    justify-content: center;
-    align-items: center;
-    margin-left: 169px;
 }

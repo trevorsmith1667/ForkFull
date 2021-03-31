@@ -1,5 +1,8 @@
 class Api::ReservationsController < ApplicationController
-
+    def index
+        @restaurants = Restaurant.all 
+        render :index
+    end
 
     def show 
         @reservation = Reservation.find_by(id: params[:id])
@@ -38,6 +41,6 @@ class Api::ReservationsController < ApplicationController
     end
 
     def reservation_params
-        params.require(:reservation).permit(:user_id, :restaurant_id, :reservation_date, :party_size)
+        params.require(:reservation).permit(:user_id, :restaurant_id, :reservation_time, :reservation_date, :party_size)
     end
 end
