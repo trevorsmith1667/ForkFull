@@ -12,6 +12,8 @@ import Modal from './modal/modal'
 import Nav from '../components/nav/nav'
 import NotFound from './not_found.jsx'
 import Homepage from './homepage/homepage'
+import RestaurantIndex from '../components/restaurant/restaurant_index_container'
+import Search from '../components/search/search_container'
 
 const App = () => (
     <div>
@@ -20,6 +22,8 @@ const App = () => (
         <Switch>
             {/* <ProtectedRoute exact path="/api/user" component={LogInFormContainer} /> */}
         <Route exact path="/" component={Homepage}/>
+        <Route path='/search' component={RestaurantIndex}/>
+        <Route exact path='/' component={Search}/>
         <Route path='/restaurants/:id' component={RestaurantShow} />
             {/* <ProtectedRoute exact path="/api/session" /> */}
         <Route  component={NotFound} />
