@@ -29,7 +29,7 @@ export const fetchRestaurant = (id) => dispatch => {
         .then(restaurant => dispatch(receiveRestaurant(restaurant)))
 }
 
-export const searchRestaurants = (search) => dispatch => {
+export const searchRestaurants = (query) => dispatch => {
     return searchAPIUtil.searchRestaurants(query).then(
         restaurants => dispatch(receiveRestaurants(restaurants))
     )

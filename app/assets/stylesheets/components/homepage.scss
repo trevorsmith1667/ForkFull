@@ -11,9 +11,8 @@
 }
 
 .background {
-    position: relative;
-    display: flex;
-    bottom: 302px;
+    position: fixed;
+    bottom: -16px;
     z-index: -100;
 }
 

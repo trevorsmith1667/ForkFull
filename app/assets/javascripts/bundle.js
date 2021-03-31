@@ -163,7 +163,7 @@ var fetchRestaurant = function fetchRestaurant(id) {
     });
   };
 };
-var searchRestaurants = function searchRestaurants(search) {
+var searchRestaurants = function searchRestaurants(query) {
   return function (dispatch) {
     return _util_search_api_util__WEBPACK_IMPORTED_MODULE_1__["searchRestaurants"](query).then(function (restaurants) {
       return dispatch(receiveRestaurants(restaurants));
@@ -272,6 +272,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_nav_nav__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/nav/nav */ "./frontend/components/nav/nav.jsx");
 /* harmony import */ var _not_found_jsx__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./not_found.jsx */ "./frontend/components/not_found.jsx");
 /* harmony import */ var _homepage_homepage__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./homepage/homepage */ "./frontend/components/homepage/homepage.jsx");
+/* harmony import */ var _components_search_search_container__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../components/search/search_container */ "./frontend/components/search/search_container.js");
+
 
 
 
@@ -295,6 +297,10 @@ var App = function App() {
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["Route"], {
     path: "/search",
     component: _components_restaurant_restaurant_index_container__WEBPACK_IMPORTED_MODULE_1__["default"]
+  }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["Route"], {
+    exact: true,
+    path: "/",
+    component: _components_search_search_container__WEBPACK_IMPORTED_MODULE_12__["default"]
   }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_5__["Route"], {
     path: "/restaurants/:id",
     component: _restaurant_restaurant_show_container__WEBPACK_IMPORTED_MODULE_7__["default"]
@@ -1939,7 +1945,7 @@ __webpack_require__.r(__webpack_exports__);
 var searchRestaurants = function searchRestaurants(search) {
   return $.ajax({
     method: 'GET',
-    url: '/api/search',
+    url: '/api/restaurants',
     data: {
       search: search
     }
