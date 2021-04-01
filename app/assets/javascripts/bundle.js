@@ -1568,12 +1568,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/index.js");
 /* harmony import */ var _users_reducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./users_reducer */ "./frontend/reducers/users_reducer.js");
 /* harmony import */ var _restaurants_reducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./restaurants_reducer */ "./frontend/reducers/restaurants_reducer.js");
+!(function webpackMissingModule() { var e = new Error("Cannot find module './reservationsReducer_reducer'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
+
 
 
 
 var entitiesReducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
   users: _users_reducer__WEBPACK_IMPORTED_MODULE_1__["default"],
-  restaurants: _restaurants_reducer__WEBPACK_IMPORTED_MODULE_2__["default"]
+  restaurants: _restaurants_reducer__WEBPACK_IMPORTED_MODULE_2__["default"],
+  reservations: !(function webpackMissingModule() { var e = new Error("Cannot find module './reservationsReducer_reducer'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())
 });
 /* harmony default export */ __webpack_exports__["default"] = (entitiesReducer);
 
