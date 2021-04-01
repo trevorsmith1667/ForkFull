@@ -1,6 +1,6 @@
 class Api::ReservationsController < ApplicationController
     def index
-        @restaurants = Restaurant.all 
+        @reservations = Reservation.all 
         render :index
     end
 
@@ -32,12 +32,11 @@ class Api::ReservationsController < ApplicationController
     def destroy
 
         @reservation = Reservation.find_by(id: params[:id])
-        if @reservation.destroy
-            render json: @reservation
+         if @reservation
+            @reservation.destroy 
         else
             render json: @review.errors.full_messages, status: 401
         end
-
     end
 
     def reservation_params
