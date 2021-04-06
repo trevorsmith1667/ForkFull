@@ -16,7 +16,7 @@ import RestaurantIndex from '../components/restaurant/restaurant_index_container
 import Search from '../components/search/search_container'
 
 const App = () => (
-    <div>
+    <div classname='app-cont'>
         <Modal />
         <Nav/>
         <Switch>
