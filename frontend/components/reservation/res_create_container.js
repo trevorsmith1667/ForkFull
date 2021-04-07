@@ -1,9 +1,9 @@
 import { connect } from 'react-redux';
+import ResCreate from '../reservation/res_create';
 import { createReservation, deleteReservation } from '../../actions/reservation_actions';
 import { fetchRestaurant } from '../../actions/restaurant_actions';
-import ReservationForm from './res_form';
 
-const mSTP = (state, ownProps) => {
+const mapStateToProps = (state, ownProps) => {
 
     const restaurant = state.entities.restaurants[ownProps.restaurantId]
     return ({
@@ -12,7 +12,7 @@ const mSTP = (state, ownProps) => {
     });
 };
 
-const mDTP = dispatch => {
+const mapDispatchToProps = dispatch => {
     return ({
         createReservation: reservation => dispatch(createReservation(reservation)),
         deleteReservation: id => dispatch(deleteReservation(id)),
@@ -21,4 +21,4 @@ const mDTP = dispatch => {
 
 };
 
-export default connect(mSTP, mDTP)(ReservationForm);
+export default connect(mapStateToProps, mapDispatchToProps)(ResCreate);

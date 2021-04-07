@@ -1,37 +1,37 @@
-export const fetchReservations = (reservations) => (
+export const fetchReservations = () => (
     $.ajax({
-        url: '/api/reservations',
-        method: "GET",
-        data: {reservations}
+        method: 'GET',
+        url: 'api/reservations',
     })
 );
 
-export const fetchReservation = (id) => (
+export const fetchReservation = id => (
     $.ajax({
-        url: `/api/reservations/${id}`,
-        method: "GET"
+        method: 'GET',
+        url: `api/reservations/${id}`
     })
 );
 
-export const updateReservation = (reservation) => (
+export const createReservation = reservation => (
     $.ajax({
-        url: `/api/reservations/:${reservation.id}`,
-        method: "PATCH",
-        data: {reservation}
+        method: 'POST',
+        url: 'api/reservations',
+        data: { reservation }
     })
 );
 
-export const createReservation = (reservation) => (
+export const updateReservation = reservation => (
     $.ajax({
-        url: `/api/reservations`,
-        method: "POST",
-        data: {reservation}
+        method: 'PATCH',
+        url: `api/reservations/${reservation.id}`,
+        data: { reservation }
+
     })
 );
 
-export const deleteReservation = (id) => (
+export const deleteReservation = id => (
     $.ajax({
-        url: `/api/reservations/:${id}`,
-        method: "DELETE"
+        method: 'DELETE',
+        url: `api/reservations/${id}`
     })
-)
+);

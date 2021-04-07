@@ -119,16 +119,14 @@ var closeModal = function closeModal() {
 /*!*************************************************!*\
   !*** ./frontend/actions/reservation_actions.js ***!
   \*************************************************/
-/*! exports provided: RECEIVE_ALL_RESERVATIONS, RECEIVE_RESERVATION, REMOVE_RESERVATION, RECEIVE_RES_ERRORS, receiveErrors, fetchReservations, fetchReservation, createReservation, updateReservation, deleteReservation */
+/*! exports provided: RECEIVE_RESERVATION, REMOVE_RESERVATION, RECEIVE_RESERVATIONS, fetchReservations, fetchReservation, createReservation, updateReservation, deleteReservation */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_ALL_RESERVATIONS", function() { return RECEIVE_ALL_RESERVATIONS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_RESERVATION", function() { return RECEIVE_RESERVATION; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "REMOVE_RESERVATION", function() { return REMOVE_RESERVATION; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_RES_ERRORS", function() { return RECEIVE_RES_ERRORS; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "receiveErrors", function() { return receiveErrors; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "RECEIVE_RESERVATIONS", function() { return RECEIVE_RESERVATIONS; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchReservations", function() { return fetchReservations; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchReservation", function() { return fetchReservation; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createReservation", function() { return createReservation; });
@@ -136,25 +134,21 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteReservation", function() { return deleteReservation; });
 /* harmony import */ var _util_reservation_api_util__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../util/reservation_api_util */ "./frontend/util/reservation_api_util.js");
 
-var RECEIVE_ALL_RESERVATIONS = 'RECEIVE_ALL_RESERVATIONS';
 var RECEIVE_RESERVATION = 'RECEIVE_RESERVATION';
 var REMOVE_RESERVATION = 'REMOVE_RESERVATION';
-var RECEIVE_RES_ERRORS = 'RECEIVE_RES_ERRORS';
+var RECEIVE_RESERVATIONS = "RECEIVE_RESERVATIONS";
 
-var receiveAllReservations = function receiveAllReservations(reservations, restaurants) {
+var receiveReservations = function receiveReservations(payload) {
   return {
-    type: RECEIVE_ALL_RESERVATIONS,
-    reservations: reservations,
-    restaurants: restaurants
+    type: RECEIVE_RESERVATIONS,
+    payload: payload
   };
 };
 
-var receiveReservation = function receiveReservation(reservation, user, restaurant) {
+var receiveReservation = function receiveReservation(reservation) {
   return {
     type: RECEIVE_RESERVATION,
-    reservation: reservation,
-    user: user,
-    restaurant: restaurant
+    reservation: reservation
   };
 };
 
@@ -165,22 +159,16 @@ var removeReservation = function removeReservation(reservationId) {
   };
 };
 
-var receiveErrors = function receiveErrors(errors) {
-  return {
-    type: RECEIVE_RES_ERRORS,
-    errors: errors
-  };
-};
 var fetchReservations = function fetchReservations() {
   return function (dispatch) {
-    return _util_reservation_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchReservations"]().then(function (reservations) {
-      return dispatch(receiveAllReservations(reservations));
+    return _util_reservation_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchReservations"]().then(function (payload) {
+      return dispatch(receiveReservations(payload));
     });
   };
 };
-var fetchReservation = function fetchReservation(reservation) {
+var fetchReservation = function fetchReservation(id) {
   return function (dispatch) {
-    return _util_reservation_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchReservation"](reservation).then(function (reservation) {
+    return _util_reservation_api_util__WEBPACK_IMPORTED_MODULE_0__["fetchReservation"](id).then(function (reservation) {
       return dispatch(receiveReservation(reservation));
     });
   };
@@ -189,8 +177,6 @@ var createReservation = function createReservation(reservation) {
   return function (dispatch) {
     return _util_reservation_api_util__WEBPACK_IMPORTED_MODULE_0__["createReservation"](reservation).then(function (reservation) {
       return dispatch(receiveReservation(reservation));
-    }, function (err) {
-      return dispatch(receiveErrors(err.responseJSON));
     });
   };
 };
@@ -685,6 +671,68 @@ var NotFound = function NotFound() {
 
 /***/ }),
 
+/***/ "./frontend/components/reservation/res_create.jsx":
+/*!********************************************************!*\
+  !*** ./frontend/components/reservation/res_create.jsx ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/react.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/es/index.js");
+
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["withRouter"])(ResCreate));
+
+/***/ }),
+
+/***/ "./frontend/components/reservation/res_create_container.js":
+/*!*****************************************************************!*\
+  !*** ./frontend/components/reservation/res_create_container.js ***!
+  \*****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
+/* harmony import */ var _reservation_res_create__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../reservation/res_create */ "./frontend/components/reservation/res_create.jsx");
+/* harmony import */ var _actions_reservation_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../actions/reservation_actions */ "./frontend/actions/reservation_actions.js");
+/* harmony import */ var _actions_restaurant_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../actions/restaurant_actions */ "./frontend/actions/restaurant_actions.js");
+
+
+
+
+
+var mapStateToProps = function mapStateToProps(state, ownProps) {
+  var restaurant = state.entities.restaurants[ownProps.restaurantId];
+  return {
+    user: state.entities.users[state.session.id],
+    restaurant: restaurant
+  };
+};
+
+var mapDispatchToProps = function mapDispatchToProps(dispatch) {
+  return {
+    createReservation: function createReservation(reservation) {
+      return dispatch(Object(_actions_reservation_actions__WEBPACK_IMPORTED_MODULE_2__["createReservation"])(reservation));
+    },
+    deleteReservation: function deleteReservation(id) {
+      return dispatch(Object(_actions_reservation_actions__WEBPACK_IMPORTED_MODULE_2__["deleteReservation"])(id));
+    },
+    fetchRestaurant: function fetchRestaurant(id) {
+      return dispatch(Object(_actions_restaurant_actions__WEBPACK_IMPORTED_MODULE_3__["fetchRestaurant"])(id));
+    }
+  };
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_0__["connect"])(mapStateToProps, mapDispatchToProps)(_reservation_res_create__WEBPACK_IMPORTED_MODULE_1__["default"]));
+
+/***/ }),
+
 /***/ "./frontend/components/restaurant/restaurant_index.jsx":
 /*!*************************************************************!*\
   !*** ./frontend/components/restaurant/restaurant_index.jsx ***!
@@ -982,6 +1030,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _restaurant_photos__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./restaurant_photos */ "./frontend/components/restaurant/restaurant_photos.jsx");
 /* harmony import */ var _restaurant_info__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./restaurant_info */ "./frontend/components/restaurant/restaurant_info.jsx");
+/* harmony import */ var _reservation_res_create_container__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../reservation/res_create_container */ "./frontend/components/reservation/res_create_container.js");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1003,6 +1052,7 @@ function _assertThisInitialized(self) { if (self === void 0) { throw new Referen
 function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
 
 function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
 
 
 
@@ -1054,7 +1104,9 @@ var RestaurantShow = /*#__PURE__*/function (_React$Component) {
         className: "show-photos"
       }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_restaurant_photos__WEBPACK_IMPORTED_MODULE_1__["default"], {
         allPhotos: this.props.restaurant.photoUrls.slice(1)
-      })));
+      })), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "rez-form"
+      }));
     }
   }]);
 
@@ -1765,7 +1817,22 @@ var reservationsReducer = function reservationsReducer() {
   }
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (reservationsReducer);
+/* harmony default export */ __webpack_exports__["default"] = (reservationsReducer); // const reservationsReducer = (state = {}, action) => {
+//     Object.freeze(state);
+//     switch (action.type) {
+//         case RECEIVE_RESERVATIONS:
+//             return Object.assign({}, action.payload.reservations);
+//         case RECEIVE_RESERVATION:
+//             return Object.assign({}, state, { [action.reservation.id]: action.reservation });
+//         case REMOVE_RESERVATION:
+//             const newState = Object.assign({}, state);
+//             delete newState[action.reservationId];
+//             return newState;
+//         default:
+//             return state;
+//     }
+// };
+// export default reservationsReducer;
 
 /***/ }),
 
@@ -1988,44 +2055,41 @@ var configureStore = function configureStore() {
 /*!***********************************************!*\
   !*** ./frontend/util/reservation_api_util.js ***!
   \***********************************************/
-/*! exports provided: fetchReservations, fetchReservation, updateReservation, createReservation, deleteReservation */
+/*! exports provided: fetchReservations, fetchReservation, createReservation, updateReservation, deleteReservation */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchReservations", function() { return fetchReservations; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchReservation", function() { return fetchReservation; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateReservation", function() { return updateReservation; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createReservation", function() { return createReservation; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateReservation", function() { return updateReservation; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "deleteReservation", function() { return deleteReservation; });
-var fetchReservations = function fetchReservations(reservations) {
+var fetchReservations = function fetchReservations() {
   return $.ajax({
-    url: '/api/reservations',
-    method: "GET",
-    data: {
-      reservations: reservations
-    }
+    method: 'GET',
+    url: 'api/reservations'
   });
 };
 var fetchReservation = function fetchReservation(id) {
   return $.ajax({
-    url: "/api/reservations/".concat(id),
-    method: "GET"
+    method: 'GET',
+    url: "api/reservations/".concat(id)
   });
 };
-var updateReservation = function updateReservation(reservation) {
+var createReservation = function createReservation(reservation) {
   return $.ajax({
-    url: "/api/reservations/:".concat(reservation.id),
-    method: "PATCH",
+    method: 'POST',
+    url: 'api/reservations',
     data: {
       reservation: reservation
     }
   });
 };
-var createReservation = function createReservation(reservation) {
+var updateReservation = function updateReservation(reservation) {
   return $.ajax({
-    url: "/api/reservations",
-    method: "POST",
+    method: 'PATCH',
+    url: "api/reservations/".concat(reservation.id),
     data: {
       reservation: reservation
     }
@@ -2033,8 +2097,8 @@ var createReservation = function createReservation(reservation) {
 };
 var deleteReservation = function deleteReservation(id) {
   return $.ajax({
-    url: "/api/reservations/:".concat(id),
-    method: "DELETE"
+    method: 'DELETE',
+    url: "api/reservations/".concat(id)
   });
 };
 
