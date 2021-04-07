@@ -7,14 +7,26 @@ require "open-uri"
 #   Character.create(name: 'Luke', movie: movies.first)
 User.destroy_all 
 Restaurant.destroy_all
+Reservation.destroy_all
 
- users = [
-   { username: 'demo_user',
-    email: 'demo_user@gmail.com',
-    password: '123456'
-   }
- ]
- User.create!(users)
+ demo = User.create!( username: 'demo_user',
+                      email: 'demo_user@gmail.com',
+                      password: '123456')
+ user1 = User.create!( username: 'foodieguy12', 
+                       email: 'fooodguy@gmail.com', 
+                       password: '123456')
+ user2 = User.create!( username: 'jameojammer', 
+                       email: 'jamjamjam@hotmail.com', 
+                       password: '123456')
+ user3 = User.create!( username: 'ethandelcarlo',
+                       email: 'ethandel111@gmail.com',
+                       password: '123456')
+ user4 = User.create!( username: 'pizzamyheart',
+                       email: 'pizzamyheart@gmail.com', 
+                       password: '123456')
+ user5 = User.create!( username: 'deadeyejedi',
+                       email: 'deadeyejedi@gmail.com',
+                       password: '123456')
 
  rest1 = Restaurant.create!(
   name: 'Acquerello',
@@ -558,3 +570,114 @@ rest25.photos.attach(io: p97, filename: 'laciccia2.png')
 rest25.photos.attach(io: p98, filename: 'laciccia3.png')
 rest25.photos.attach(io: p99, filename: 'laciccia4.png')
 rest25.photos.attach(io: p100, filename: 'laciccia5.png')
+
+
+res0 = Reservation.create!(restaurant_id: 1,
+                                guest_id: demo_user.id,
+                                party_size: 1,
+                                reservation_date_time: Time.new(2021, 04, 10, 14, 00, 00))
+
+res1 = Reservation.create!(restaurant_id: 2,
+                                guest_id: demo_user.id,
+                                party_size: 2,
+                                reservation_date_time: Time.new(2017, 2, 13, 12, 30, 00))
+
+res2 = Reservation.create!(restaurant_id: 3,
+                                guest_id: demo_user.id,
+                                party_size: 1,
+                                reservation_date_time: Time.new(2017, 3, 17, 10, 30, 00))
+
+res3 = Reservation.create!(restaurant_id: 3,
+                                guest_id: demo_user.id,
+                                party_size: 1,
+                                reservation_date_time: Time.new(2017, 4, 19, 4, 30, 00))
+
+res4 = Reservation.create!(restaurant_id: 4,
+                                guest_id: demo_user.id,
+                                party_size: 4,
+                                reservation_date_time: Time.new(2017, 5, 20, 10, 30, 00))
+
+res5 = Reservation.create!(restaurant_id: 5,
+                                guest_id: demo_user.id,
+                                party_size: 10,
+                                reservation_date_time: Time.new(2017, 6, 23, 11, 30, 00))
+
+res6 = Reservation.create!(restaurant_id: 10,
+                                guest_id: demo_user.id,
+                                party_size: 4,
+                                reservation_date_time: Time.new(2017, 10, 18, 14, 30, 00))
+
+res7 = Reservation.create!(restaurant_id: 23,
+                                guest_id: demo_user.id,
+                                party_size: 2,
+                                reservation_date_time: Time.new(2018, 12, 7, 19, 00, 00))
+
+res8 = Reservation.create!(restaurant_id: 1,
+                                guest_id: demo_user.id,
+                                party_size: 6,
+                                reservation_date_time: Time.new(2018, 5, 14, 10, 30, 00))
+
+res9 = Reservation.create!(restaurant_id: 19,
+                                guest_id: demo_user.id,
+                                party_size: 4,
+                                reservation_date_time: Time.new(2018, 7, 19, 4, 30, 00))
+
+res10 = Reservation.create!(restaurant_id: 25,
+                                guest_id: user1.id,
+                                party_size: 1,
+                                reservation_date_time: Time.new(2018, 12, 4, 17, 30, 00))
+
+res11 = Reservation.create!(restaurant_id: 24,
+                                guest_id: user1.id,
+                                party_size: 1,
+                                reservation_date_time: Time.new(2018, 8, 8, 12, 30, 00))
+
+res12 = Reservation.create!(restaurant_id: 23,
+                                guest_id: user1.id,
+                                party_size: 2,
+                                reservation_date_time: Time.new(2018, 9, 9, 10, 00, 00))
+
+res13 = Reservation.create!(restaurant_id: 22,
+                                guest_id: user1.id,
+                                party_size: 1,
+                                reservation_date_time: Time.new(2018, 10, 12, 22, 30, 00))
+
+res14 = Reservation.create!(restaurant_id: 21,
+                                guest_id: user1.id,
+                                party_size: 3,
+                                reservation_date_time: Time.new(2019, 12, 17, 8, 30, 00))
+
+res15 = Reservation.create!(restaurant_id: 20,
+                                guest_id: user1.id,
+                                party_size: 1,
+                                reservation_date_time: Time.new(2019, 5, 1, 20, 30, 00))
+
+res16 = Reservation.create!(restaurant_id: 1,
+                                guest_id: user2.id,
+                                party_size: 11,
+                                reservation_date_time: Time.new(2019, 7, 8, 21, 00, 00))
+
+res17 = Reservation.create!(restaurant_id: 12,
+                                guest_id: user2.id,
+                                party_size: 1,
+                                reservation_date_time: Time.new(2019, 1, 19, 16, 30, 00))
+
+res18 = Reservation.create!(restaurant_id: 13,
+                                guest_id: user2.id,
+                                party_size: 3,
+                                reservation_date_time: Time.new(2019, 2, 18, 19, 00, 00))
+
+res19 = Reservation.create!(restaurant_id: 17,
+                                guest_id: user2.id,
+                                party_size: 6,
+                                reservation_date_time: Time.new(2019, 3, 12, 3, 30, 00))
+
+res20 = Reservation.create!(restaurant_id: 14,
+                                guest_id: user2.id,
+                                party_size: 5,
+                                reservation_date_time: Time.new(2020, 8, 10, 4, 30, 00))
+
+res21 = Reservation.create!(restaurant_id: 15,
+                                guest_id: user2.id,
+                                party_size: 4,
+                                reservation_date_time: Time.new(2020, 11, 20, 10, 30, 00))

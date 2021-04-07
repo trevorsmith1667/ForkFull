@@ -1,6 +1,7 @@
 import React from 'react'
 import RestaurantPhotos from'./restaurant_photos'
 import RestaurantInfo from './restaurant_info'
+import ResCreate from '../reservation/res_create_container'
 
 class RestaurantShow extends React.Component {
     constructor(props){
@@ -28,6 +29,9 @@ class RestaurantShow extends React.Component {
                 <div className="show-photos">
                     <RestaurantPhotos allPhotos={this.props.restaurant.photoUrls.slice(1)} />
                 </div> 
+                <div className="rez-form">
+                    {/* <ResCreate/> */}
+                </div>
 
            </div>
 
